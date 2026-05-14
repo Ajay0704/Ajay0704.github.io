@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FourBlock &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Case study: Business Analyst Intern at FourBlock — pre/post assessment analysis, sentiment analysis on 1,200+ survey responses, format comparison, and alumni survey redesign for a veteran workforce nonprofit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="masthead-bar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo">
+        <img class="case-logo-img"
+             src="images/fourblock-logo.jpg"
+             alt="FourBlock" />
+      </div>
+      <div class="case-hero-meta">
+        <h1 class="page-title">Business Analyst Intern</h1>
+        <p class="case-org">FourBlock</p>
+        <ul class="case-meta-list">
+          <li>
+            <span class="case-meta-label">Location</span>
+            <span class="case-meta-value">New York, NY</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Duration</span>
+            <span class="case-meta-value">January – April 2025</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Type</span>
+            <span class="case-meta-value">
+              <span class="badge badge-intern">Internship</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THE CHALLENGE ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Challenge</h2>
+      <div class="case-body reveal">
+        <p>
+          FourBlock is a nonprofit that helps transitioning service members move into civilian careers,
+          running structured career-readiness programs across multiple cohorts and formats every year.
+          The program had been collecting pre and post assessment data for years and had real impact
+          stories to tell, but three problems were getting in the way of telling them clearly.
+        </p>
+        <p>
+          Post-program survey response rates were low, which meant the data the team was working with
+          was thinner than it needed to be. Alumni progress became a black hole after graduation, so the
+          program could measure short-term confidence shifts but not long-term career outcomes. And
+          tracking and reporting across cohorts, formats, and years was difficult enough that the deeper
+          questions, like whether the in-person format actually outperformed virtual, or how sentiment
+          shifted across years, were not being answered systematically.
+        </p>
+        <p>
+          The team brought in a small group of Northeastern interns to dig in. My focus was the analytics
+          layer: clean the data, surface what it was actually saying, redesign the instruments collecting
+          it, and propose a framework for tracking alumni over time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT I DID ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Did</h2>
+      <div class="case-body reveal">
+        <p>
+          The work split into four threads, and they reinforced each other.
+        </p>
+        <p>
+          The first thread was the pre and post assessment analysis. The raw data lived in Salesforce,
+          where the program tracked participants, cohort information, and survey responses across years.
+          I used SQL to extract the relevant records, then cleaned and structured them in Python before
+          building skill-by-skill comparisons across the full set of career readiness benchmarks the
+          program tracked, from elevator pitch and salary negotiation to networking with civilians and
+          understanding corporate culture. The output gave the team a clear, defensible view of which
+          skills moved most after the program and which did not, broken down by year so trends were
+          visible rather than buried in averages.
+        </p>
+        <p>
+          The second thread was sentiment analysis on 1,200+ open-ended survey responses. Rather than
+          reading every comment by hand, which is what the team had been doing, I built a Python pipeline
+          using both TextBlob and VADER to score sentiment across pre and post responses. Using two
+          libraries was a deliberate choice. TextBlob handles formal language well, VADER picks up the
+          nuance in informal and expressive text, and together they gave a more honest read of what
+          participants were actually feeling than either would alone. The output showed clear sentiment
+          shifts category by category and pointed to specific areas where the program could improve.
+        </p>
+        <p>
+          The third thread was a comparison between in-person and virtual program formats across multiple
+          cohort years. The team had a long-running question about whether one format consistently
+          outperformed the other, and the data had never been pushed hard enough to answer it. I built
+          year-over-year comparisons across the shared skill measures, layered them into a heatmap so
+          the differences were readable at a glance, and surfaced where the gap between formats actually
+          mattered versus where it was statistical noise.
+        </p>
+        <p>
+          The fourth thread was redesigning the alumni survey itself. The existing instrument was long
+          enough that response rates suffered, and the questions were not structured around the outcomes
+          the program most needed to defend to funders and partner companies. I analyzed what was driving
+          drop-off, restructured the survey into four focused sections covering outcomes, program
+          effectiveness, demographics and follow-up, and career readiness, and proved through the analysis
+          that a shorter format could maintain outcome quality while increasing participation. Alongside
+          the redesign, I proposed a longitudinal framework for tracking alumni progression over time
+          and a five-part strategy for sustained engagement covering message framing, channels,
+          personalization, value exchange, and timing.
+        </p>
+        <p>
+          The deliverables for the program included multiple written reports, a final presentation to
+          the FourBlock and Northeastern teams, and the restructured survey ready for the next cohort.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY OUTCOMES ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Key Outcomes</h2>
+      <ul class="case-outcomes reveal">
+        <li>Multi-year pre and post assessment analysis delivered across the full set of career readiness skills, giving the program clear visibility into which interventions moved the needle most.</li>
+        <li>Sentiment analysis pipeline built in Python using TextBlob and VADER, processing 1,200+ open-ended responses and replacing a manual review process.</li>
+        <li>In-person vs virtual format comparison answered a long-standing program question, with year-over-year analysis surfacing where format genuinely affected outcomes.</li>
+        <li>Redesigned alumni survey structured around outcomes, program effectiveness, demographics, and career readiness, proven to maintain quality while increasing participation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-bottom">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Tools</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Salesforce</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Jupyter</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-top">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Sentiment Analysis</span>
+        <span class="tag">Survey Design</span>
+        <span class="tag">Stakeholder Communication</span>
+        <span class="tag">Data Storytelling</span>
+        <span class="tag">Program Evaluation</span>
+        <span class="tag">Comparative Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK NAV ===== -->
+  <nav class="case-back-nav">
+    <div class="container case-container">
+      <a href="experience.html" class="case-back-link">&larr; Back to Experience</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ajay Karthick &mdash; Boston, MA</p>
+      <a href="index.html" class="footer-top">Back to home &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

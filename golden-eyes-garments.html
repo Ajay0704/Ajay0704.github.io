@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Eyes Garments &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Case study: Data Analyst at Golden Eyes Garments — built the data foundation, production analytics, demand forecasting, and Tableau reporting for a Tirupur knitwear manufacturer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="masthead-bar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo">
+        <img class="case-logo-img"
+             src="images/golden-eyes-logo.png"
+             alt="Golden Eyes Garments" />
+      </div>
+      <div class="case-hero-meta">
+        <h1 class="page-title">Data Analyst</h1>
+        <p class="case-org">Golden Eyes Garments</p>
+        <ul class="case-meta-list">
+          <li>
+            <span class="case-meta-label">Location</span>
+            <span class="case-meta-value">Tirupur, Tamil Nadu, India</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Duration</span>
+            <span class="case-meta-value">July 2022 – July 2024</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Type</span>
+            <span class="case-meta-value">
+              <span class="badge badge-fulltime">Full-time</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THE CHALLENGE ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Challenge</h2>
+      <div class="case-body reveal">
+        <p>
+          Golden Eyes Garments is a vertically integrated knitwear manufacturer and exporter based in
+          Tirupur, the knitwear hub of South India. The operation spans design, yarn, fabric, and finished
+          garments across men's, women's, children's, and sustainable product lines, serving international
+          buyers under tight delivery windows. When I joined, the data side of the business was still
+          largely manual. Production tracking lived in scattered spreadsheets, inventory was managed by
+          intuition and end-of-month counts, and weekly reports for the management team were stitched
+          together by hand from multiple sources. The operation was running, but the visibility was
+          reactive. By the time a problem showed up in a report, it had already cost time, fabric, or
+          a shipment window.
+        </p>
+        <p>
+          There was no system. Production counts were written on paper at each stage of the floor, then
+          transferred into Excel sheets by supervisors at the end of each shift. Inventory lived in stock
+          registers updated by hand. Order data sat with the merchandising team in a separate set of
+          files. Nothing was connected, and nothing was queryable. Pulling a single answer often meant
+          chasing three or four people across the operation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT I DID ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Did</h2>
+      <div class="case-body reveal">
+        <p>
+          I spent the first few months on the floor before touching the data. Talking to production
+          supervisors, sitting with the merchandising team, watching how orders moved from cutting to
+          stitching to finishing to packing. That context shaped everything that came after. The most
+          expensive problems were never visible in a single spreadsheet. They lived in the handoffs
+          between stages, in the gap between what the buyer ordered and what inventory could actually
+          support, and in the time the management team spent compiling reports instead of acting on them.
+        </p>
+        <p>
+          The first thing I built was the foundation. Standardized data collection templates for the
+          floor and the merchandising team, so every shift, every order, and every stock movement was
+          being recorded in a consistent format. I consolidated the existing scattered sheets into a
+          single working dataset, and used Python to handle the cleanup and transformation work that
+          would have taken weeks by hand. None of this was glamorous, but it was the unlock. Once the
+          data could be trusted, every project after it became possible.
+        </p>
+        <p>
+          The first analytical project tackled production output. I built a structured tracking system
+          across each stage of the manufacturing process and started analyzing where time was being
+          lost. Using Python to join and analyze production logs across stages, I identified bottlenecks
+          that were not obvious from the floor alone, particularly in the handoff between stitching and
+          checking. Working with production supervisors, we adjusted scheduling and line balancing based
+          on what the numbers showed, and output improved by 12% over the following months.
+        </p>
+        <p>
+          The second project was inventory. Stock overages on yarn and fabric were tying up working
+          capital and creating waste at the end of every season. I built a demand forecasting model
+          that combined historical order patterns, seasonality, and the current order book, using Python
+          for the underlying analysis and Excel as the interface the merchandising team could actually
+          work with. Once they trusted the model, excess inventory dropped by 18%.
+        </p>
+        <p>
+          The third project was reporting. Every week, hours were being spent manually pulling numbers
+          from different files to produce management reports. I rebuilt the reporting layer in Tableau
+          and Excel, pulling directly from the centralized dataset so updates flowed through automatically.
+          The team stopped building reports and started reading them. Manual reporting time dropped by
+          roughly 15 hours a week, a 40% reduction, and the management team finally had a single, trusted
+          view of the operation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY OUTCOMES ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Key Outcomes</h2>
+      <ul class="case-outcomes reveal">
+        <li>Built the data foundation from scratch &mdash; standardized collection templates, centralized dataset, and clean pipelines where none had existed before.</li>
+        <li>12% improvement in production output through bottleneck analysis and line balancing across manufacturing stages.</li>
+        <li>18% reduction in stock overages via a demand forecasting model that replaced gut-feel inventory planning.</li>
+        <li>40% reduction in manual reporting time by replacing handbuilt weekly reports with connected Tableau and Excel dashboards.</li>
+        <li>End-to-end visibility delivered to the management team, shifting decisions from reactive to proactive.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-bottom">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Tools</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Tableau</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-top">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Bottleneck Analysis</span>
+        <span class="tag">Demand Forecasting</span>
+        <span class="tag">Inventory Management</span>
+        <span class="tag">Process Mapping</span>
+        <span class="tag">Dashboard Design</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Operational Reporting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK NAV ===== -->
+  <nav class="case-back-nav">
+    <div class="container case-container">
+      <a href="experience.html" class="case-back-link">&larr; Back to Experience</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ajay Karthick &mdash; Boston, MA</p>
+      <a href="index.html" class="footer-top">Back to home &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

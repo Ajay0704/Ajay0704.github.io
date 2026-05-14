@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet">
+  <rect width="240" height="240" fill="#ffffff" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="0" y1="0" x2="240" y2="0" stroke="#c0392b" stroke-width="6"/>
+  <text x="120" y="105" font-family="Playfair Display, Georgia, serif" font-size="48" font-weight="900" text-anchor="middle" fill="#1a1a1a" letter-spacing="2">DOMINO'S</text>
+  <text x="120" y="140" font-family="Playfair Display, Georgia, serif" font-size="38" font-weight="900" text-anchor="middle" fill="#1a1a1a" letter-spacing="3">JAPAN</text>
+  <text x="120" y="172" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="2.2" text-anchor="middle" fill="#6b6b6b">CASE COMPETITION</text>
+  <text x="120" y="208" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="2" text-anchor="middle" fill="#c0392b">PLACEHOLDER</text>
+</svg>

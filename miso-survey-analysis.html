@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MISO Survey Analysis &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Case study: Student Behavior Pre & Post-Pandemic — a longitudinal MISO survey analysis across 2018, 2021, and 2024, turned into a data-driven story for institutional leaders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="masthead-bar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo">
+        <img class="case-logo-img"
+             src="images/miso-logo.jpg"
+             alt="MISO Survey Analysis" />
+      </div>
+      <div class="case-hero-meta">
+        <p class="page-eyebrow">MISO Survey Analysis &middot; Class Project</p>
+        <h1 class="page-title">Student Behavior Pre &amp; Post-Pandemic</h1>
+        <p class="case-org">Northeastern University</p>
+        <ul class="case-meta-list">
+          <li>
+            <span class="case-meta-label">Location</span>
+            <span class="case-meta-value">Boston, MA</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Duration</span>
+            <span class="case-meta-value">January 2025 – April 2025</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Type</span>
+            <span class="case-meta-value">Data Storytelling Project</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THE CHALLENGE ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Challenge</h2>
+      <div class="case-body reveal">
+        <p>
+          The MISO survey is a recurring instrument used by colleges and universities to measure how
+          students, faculty, and staff use technology and academic services. Three survey years (2018,
+          2021, and 2024) sat across the pandemic timeline, creating a rare longitudinal view of how
+          the pandemic reshaped student expectations. The problem was that the three datasets were
+          not easy to compare. Column structures differed across years, Likert scales used different
+          label sets, and service names had changed over time (Blackboard Learn became Canvas). The
+          data had a story to tell, but no one had unified it long enough to hear it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT I DID ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Did</h2>
+      <div class="case-body reveal">
+        <p>
+          The work split into four phases.
+        </p>
+        <p>
+          The first phase was data preparation. I worked in Python and Excel to clean and restructure
+          the three survey years into a tidy, long-format dataset. That meant simplifying multilevel
+          columns, normalizing Likert scales using reference mappings for each year, and manually
+          standardizing response labels and service names so a longitudinal comparison was actually
+          possible.
+        </p>
+        <p>
+          The second phase was exploratory data analysis in Tableau. I analyzed how platform usage,
+          perceived importance, and satisfaction shifted across the three survey years, focusing on
+          the institutional transition from Blackboard Learn to Canvas, the rising importance of
+          digital services like Wi-Fi and IT Helpdesk, and the persistent gap between how much students
+          relied on technology and how satisfied they were with the support around it.
+        </p>
+        <p>
+          The third phase was narrative development. Rather than presenting raw data, I built two
+          student personas grounded in the actual usage patterns. The first persona represented the
+          self-directed learner who fully embraces digital-first tools. The second represented the
+          commuter student whose dependence on those tools collides with inadequate support when
+          something breaks. Together they framed a single insight: the pandemic did not just accelerate
+          digital adoption, it permanently changed what students expect from their institutions.
+        </p>
+        <p>
+          The fourth phase was visualization. I designed Tableau dashboards guided by Brent Dykes'
+          principles for visual storytelling, using stacked bar charts to compare physical versus
+          digital service importance, divergent stacked bars to show satisfaction shifts across
+          services, and bubble charts to highlight preferred learning methods.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY OUTCOMES ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Key Outcomes</h2>
+      <ul class="case-outcomes reveal">
+        <li>Three years of fragmented survey data unified into a single longitudinal dataset.</li>
+        <li>Central insight delivered: the pandemic permanently shifted student expectations toward digital-first learning, and the gap between expectation and support quality is now a real institutional risk.</li>
+        <li>Two student personas built to ground the data in lived experience for executive audiences.</li>
+        <li>Tableau dashboards designed for storytelling, not just reporting.</li>
+        <li>Strategic recommendations for institutional IT and support investment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-bottom">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Tools</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Miro</span>
+        <span class="tag">Canva</span>
+        <span class="tag">PowerPoint</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section case-section case-section-alt case-section-tight-top">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Longitudinal Analysis</span>
+        <span class="tag">Data Cleaning &amp; Standardization</span>
+        <span class="tag">Persona Development</span>
+        <span class="tag">Data Storytelling</span>
+        <span class="tag">Visualization Design</span>
+        <span class="tag">Executive Communication</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK NAV ===== -->
+  <nav class="case-back-nav">
+    <div class="container case-container">
+      <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ajay Karthick &mdash; Boston, MA</p>
+      <a href="index.html" class="footer-top">Back to home &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

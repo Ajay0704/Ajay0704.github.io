@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tariff Shock Navigator &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Case study: A self-built, end-to-end Python pipeline turning live US government data into executive-ready tariff risk intelligence for trade and operations analysts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="masthead-bar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo">
+        <img class="case-logo-img"
+             src="images/tariff-shock-logo.jpg"
+             alt="Tariff Shock Navigator" />
+      </div>
+      <div class="case-hero-meta">
+        <p class="page-eyebrow">Self-built &middot; Trade &amp; Supply Chain Analytics</p>
+        <h1 class="page-title">Tariff Risk Intelligence for US Imports</h1>
+        <p class="case-org">Self-Built &middot; Open Source</p>
+        <ul class="case-meta-list">
+          <li>
+            <span class="case-meta-label">Location</span>
+            <span class="case-meta-value">Boston, MA</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Duration</span>
+            <span class="case-meta-value">2025 – 2026</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Type</span>
+            <span class="case-meta-value">Self-Built Project</span>
+          </li>
+        </ul>
+        <div style="margin-top: 28px;">
+          <a href="https://github.com/Ajay0704/tariff-shock-navigator" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THE CHALLENGE ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Challenge</h2>
+      <div class="case-body reveal">
+        <p>
+          US companies importing goods from China, Vietnam, India, and Mexico are sitting on $221.8
+          billion in annual tariff cost exposure at current rates. A 25-point tariff shock would add
+          another $192.6 billion to that bill, enough to erode 71% of average gross margins on the
+          affected categories. The information needed to manage that risk is technically public,
+          scattered across the Census Bureau, the Bureau of Labor Statistics, and the Federal Register.
+          But almost no one in the operations or trade analyst seat actually pulls it that way. Most
+          companies are still managing exposure through manual spreadsheets, gut feel, and reactive
+          moves after tariff changes hit the news. I built this tool because that gap kept showing up
+          in news cycles, client conversations, and case studies, and I wanted to see if a single
+          analyst with the right pipeline could close it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT I DID ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Did</h2>
+      <div class="case-body reveal">
+        <p>
+          I built Tariff Shock Navigator as an end-to-end, reproducible Python pipeline that ingests
+          live US government data and turns it into executive-ready risk intelligence. The system is
+          open source and lives on GitHub.
+        </p>
+        <p>
+          The first piece was data engineering. I built scripts that pull live data from three free
+          government APIs: the US Census Bureau International Trade API for 2023 US imports by HS2
+          chapter and country, the BLS Import Price Program for monthly price indices across 35
+          months, and the Federal Register API for tariff policy documents since January 2024. Every
+          number in the pipeline is traceable back to a real API response. No Kaggle datasets, no
+          synthetic data.
+        </p>
+        <p>
+          The second piece was the risk scoring engine. I built a composite tariff risk score that
+          blends tariff rate exposure, country-level policy risk, and import dollar volume using a
+          weighted formula (40/35/25). The output is a scored 0-10 risk rating for every
+          country-chapter pair in the dataset, with 20 of 40 pairs flagged as critical risk
+          combinations.
+        </p>
+        <p>
+          The third piece was scenario simulation. The tool models three shock scenarios (Base,
+          Moderate, Severe) against current tariff levels, projecting the additional cost exposure
+          each scenario would create across countries and product categories. That output gives
+          operations and trade analysts a way to quantify exposure in advance instead of reacting
+          after a policy change.
+        </p>
+        <p>
+          The fourth piece was trend analysis. I built a BLS price trend module with automated spike
+          detection across 35 months of import price index data, surfacing seven historical spike
+          months and the deflationary trend in capital goods electronics.
+        </p>
+        <p>
+          The fifth piece was the executive layer. Rather than leaving the analysis as a CSV, I wrote
+          a script that auto-generates a full executive briefing in Markdown directly from the
+          processed data, along with six matplotlib visualizations covering country-level risk, HS
+          chapter exposure, scenario impact, BLS price trends, import share, and a country × product
+          exposure heatmap. The brief and the charts regenerate every time the underlying data is
+          refreshed.
+        </p>
+        <p>
+          The whole pipeline is documented through a business requirements document, an as-is/to-be
+          process analysis, and a KPI dictionary with formulas, thresholds, and owners.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IT PRODUCES ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What It Produces</h2>
+      <div class="case-body reveal">
+        <p>
+          The pipeline auto-generates six visualizations directly from the live API data. Every chart
+          regenerates on each data refresh, so the views stay current as tariff rates, imports, and
+          price indices shift.
+        </p>
+      </div>
+      <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px 32px; margin-top: 56px;">
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_01_tariff_exposure_heatmap.png"
+               alt="Country Risk Bubble chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">Country Risk Bubble</strong>
+            Each bubble plots import value against composite risk score, sized by total tariff exposure. China and Vietnam emerge as the highest-risk combinations.
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_02_country_exposure_bar.png"
+               alt="HS Chapter Exposure chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">HS Chapter Exposure</strong>
+            Top product categories ranked by tariff cost exposure. Electronics and vehicles dominate the dollar exposure across all four origin countries.
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_03_scenario_comparison.png"
+               alt="Scenario Impact chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">Scenario Impact</strong>
+            Additional cost burden across Base, Moderate, and Severe tariff shock scenarios, broken down by country. The Severe scenario adds $192.6B in exposure.
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_04_monthly_trends.png"
+               alt="BLS Price Trend chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">BLS Price Trend</strong>
+            BLS All Imports price index across 35 months with automated spike detection. Seven spike months are flagged in the underlying data.
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_05_bls_price_index.png"
+               alt="Import Share by Country chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">Import Share by Country</strong>
+            Mexico leads at $351.2B, driven by vehicles and electronics. The mix highlights where supplier diversification matters most.
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img" style="aspect-ratio: 4 / 3; object-fit: contain; background: #faf9f6; width: 100%;"
+               src="https://raw.githubusercontent.com/Ajay0704/tariff-shock-navigator/main/charts/chart_06_risk_quadrant.png"
+               alt="Country × Product Heatmap chart" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 14px;">
+            <strong style="font-style: normal; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; display: block; margin-bottom: 6px;">Country × Product Heatmap</strong>
+            Tariff exposure intensity across every country-chapter pair. 20 of 40 combinations flagged as critical risk.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY OUTCOMES ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Key Outcomes</h2>
+      <ul class="case-outcomes reveal">
+        <li>End-to-end reproducible pipeline ingesting live data from three US government APIs.</li>
+        <li>$770.2 billion in 2023 US imports analyzed across 4 countries and 10 HS chapters.</li>
+        <li>$221.8 billion in annual tariff cost exposure quantified at current rates, with $192.6 billion in additional exposure modeled under severe shock.</li>
+        <li>Composite risk scoring engine scoring all 40 country-chapter pairs on a 0-10 scale.</li>
+        <li>Auto-generated executive briefing and six visualizations regenerated on every data refresh.</li>
+        <li>Full business analysis documentation including BRD, as-is/to-be process analysis, and a KPI dictionary.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section case-section case-section-tight-bottom">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Tools</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">SQL</span>
+        <span class="tag">US Census API</span>
+        <span class="tag">BLS API</span>
+        <span class="tag">Federal Register API</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section case-section case-section-tight-top">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Data Engineering</span>
+        <span class="tag">API Integration</span>
+        <span class="tag">Risk Modeling</span>
+        <span class="tag">Scenario Simulation</span>
+        <span class="tag">Trend Analysis</span>
+        <span class="tag">Executive Reporting</span>
+        <span class="tag">Business Requirements Documentation</span>
+        <span class="tag">KPI Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK NAV ===== -->
+  <nav class="case-back-nav">
+    <div class="container case-container">
+      <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ajay Karthick &mdash; Boston, MA</p>
+      <a href="index.html" class="footer-top">Back to home &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
