@@ -193,9 +193,9 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-inner {
-  max-width: var(--container);
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   height: 72px;
   display: flex;
   align-items: center;
