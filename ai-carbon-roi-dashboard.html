@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Carbon &amp; Human ROI Dashboard &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Case study: A full-stack BI dashboard translating AI API usage logs into financial intelligence and carbon metrics — 100K sessions, 43 models, live MISO grid integration, RSA-authenticated Snowflake pipeline." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="masthead-bar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY HERO ===== -->
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo">
+        <img class="case-logo-img"
+             src="images/ai-carbon-logo.png"
+             alt="AI Carbon &amp; Human ROI Dashboard" />
+      </div>
+      <div class="case-hero-meta">
+        <p class="page-eyebrow">Self-built &middot; BI &amp; Analytics</p>
+        <h1 class="page-title">AI Carbon &amp; Human ROI Dashboard</h1>
+        <p class="case-org">Personal Portfolio Project</p>
+        <ul class="case-meta-list">
+          <li>
+            <span class="case-meta-label">Location</span>
+            <span class="case-meta-value">Boston, MA</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Duration</span>
+            <span class="case-meta-value">May 2026</span>
+          </li>
+          <li>
+            <span class="case-meta-label">Type</span>
+            <span class="case-meta-value">Self-Built Project</span>
+          </li>
+        </ul>
+        <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="https://ai-carbon-roi-dashboard-ahfmyemoqp4xs4o9rbx6ud.streamlit.app" target="_blank" rel="noopener"
+             class="btn btn-primary btn-sm">Live Dashboard &rarr;</a>
+          <a href="https://github.com/Ajay0704/ai-carbon-roi-dashboard" target="_blank" rel="noopener"
+             class="btn btn-secondary btn-sm">GitHub</a>
+          <a href="https://northeastern-team-jo3g4a55.atlassian.net/wiki/external/N2YxZTdhMDEzNmNlNDc2YWE0ZGY5NWRjMTQxNTA1ZTg" target="_blank" rel="noopener"
+             class="btn btn-secondary btn-sm">Documentation</a>
+          <a href="https://miro.com/app/board/uXjVHTUX6Ps=/?moveToWidget=3458764671997758888&amp;cot=14" target="_blank" rel="noopener"
+             class="btn btn-secondary btn-sm">Architecture</a>
+          <a href="https://drive.google.com/file/d/1-Kwug38MytWH7PX7pWIflrpno-noxVNU/view" target="_blank" rel="noopener"
+             class="btn btn-secondary btn-sm">Project Report</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== THE CHALLENGE ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Challenge</h2>
+      <div class="case-body reveal">
+        <p>
+          Most organizations deploying AI today can tell you what they spent on tokens. Almost none
+          can tell you what they got for it, or what it cost the planet. Finance leaders see monthly
+          API invoices with no breakdown by outcome, model, or environmental impact. Operations
+          managers have no way to detect runaway agent loops before they drain company credit. There
+          is no standard tool that bridges AI telemetry data and business value metrics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT I BUILT ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Built</h2>
+      <div class="case-body reveal">
+        <p>
+          A full-stack business intelligence dashboard that ingests 100,000 AI API session logs from
+          Snowflake, enriches them with real-time carbon calculations from the MISO energy grid, and
+          surfaces actionable insights through an interactive Streamlit dashboard.
+        </p>
+        <p>
+          The core of the project is the Cost per Successful Task metric &mdash; total spend divided
+          by sessions where feedback score was 4 or above. This reframes AI spend from a line item
+          expense into an efficiency ratio. A cheap model that fails 60% of the time may cost more
+          per good outcome than an expensive model that succeeds 95% of the time.
+        </p>
+        <p>
+          The carbon layer pulls live fuel mix data from the MISO Midwest grid API every 5 minutes
+          &mdash; wind, solar, coal, natural gas, nuclear percentages &mdash; and calculates a
+          dynamic carbon coefficient for every session. Not a hardcoded estimate. It reflects what
+          the grid actually looks like at that moment.
+        </p>
+        <p>
+          The anomaly detection layer flags agent loop bursts where a single session triggers more
+          than 50 API calls in 60 seconds, and downgrade candidates where expensive frontier models
+          handle simple low-token tasks at 10x unnecessary cost.
+        </p>
+        <p>
+          The HITL ROI Calculator compares AI task cost to equivalent human labor hours, translating
+          token math into the language finance and operations leaders already use to make resourcing
+          decisions.
+        </p>
+        <p>
+          The pipeline connects to Snowflake using RSA key pair authentication with no passwords
+          stored anywhere. Private key lives outside the repo, credentials injected via Streamlit
+          secrets on deployment, Snowflake account password unset entirely.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY OUTCOMES ===== -->
+  <section class="section case-section">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Key Outcomes</h2>
+      <ul class="case-outcomes reveal">
+        <li>Cost per Successful Task metric surfaces what you paid per good outcome, not just total spend.</li>
+        <li>Live MISO grid integration calculates dynamic carbon emissions updated every 5 minutes.</li>
+        <li>544 latency anomalies flagged across 100,000 sessions using z-score analysis.</li>
+        <li>Model Efficiency Quadrant plots 43 models on cost vs quality axes with four labeled zones.</li>
+        <li>28 months of enterprise-calibrated session data spanning January 2024 to April 2026.</li>
+        <li>Deployed publicly on Streamlit Cloud with Snowflake as the live backend data source.</li>
+        <li>RSA key pair authentication with zero passwords anywhere in the codebase.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD SCREENSHOTS ===== -->
+  <section class="section case-section case-section-alt">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Dashboard Screenshots</h2>
+      <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px 28px; margin-top: 40px;">
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img"
+               style="aspect-ratio: 4 / 3; object-fit: cover; width: 100%;"
+               src="images/ai-carbon/dashboard-1.jpeg"
+               alt="Model Efficiency Quadrant & Carbon Emissions" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 12px;">
+            KPI Cards, MISO Live Grid Fuel Mix, Cost vs Quality Quadrant &amp; Carbon Emissions by Model
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img"
+               style="aspect-ratio: 4 / 3; object-fit: cover; width: 100%;"
+               src="images/ai-carbon/dashboard-2.jpeg"
+               alt="Live MISO Grid Fuel Mix & KPI Cards" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 12px;">
+            Cost &amp; Carbon Trend, Anomaly &amp; Efficiency Flags, AI Health Summary
+          </figcaption>
+        </figure>
+
+        <figure style="margin: 0;">
+          <img class="case-figure-img"
+               style="aspect-ratio: 4 / 3; object-fit: cover; width: 100%;"
+               src="images/ai-carbon/dashboard-3.jpeg"
+               alt="Cost & Carbon Trend — 28 Months" loading="lazy" />
+          <figcaption class="case-figure-caption" style="text-align: left; margin-top: 12px;">
+            Full System Architecture &mdash; Data Sources through Deployment
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS ===== -->
+  <section class="section case-section case-section-tight-bottom">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Tools</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Python</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Snowflake</span>
+        <span class="tag">Plotly</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Miro</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section case-section case-section-tight-top">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="case-tools reveal">
+        <span class="tag">Data Pipeline Engineering</span>
+        <span class="tag">BI Dashboard Design</span>
+        <span class="tag">Cloud Data Architecture</span>
+        <span class="tag">Carbon Accounting</span>
+        <span class="tag">Anomaly Detection</span>
+        <span class="tag">Financial Modeling</span>
+        <span class="tag">API Integration</span>
+        <span class="tag">Data Storytelling</span>
+        <span class="tag">RSA Authentication</span>
+        <span class="tag">Synthetic Data Generation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK NAV ===== -->
+  <nav class="case-back-nav">
+    <div class="container case-container">
+      <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ajay Karthick &mdash; Boston, MA</p>
+      <a href="index.html" class="footer-top">Back to home &rarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
