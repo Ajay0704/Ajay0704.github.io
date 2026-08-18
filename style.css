@@ -1016,6 +1016,8 @@ img { display: block; max-width: 100%; }
   border-top: 4px solid var(--ink);
   padding: 36px 30px;
   transition: border-color var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .edu-card:hover {
   border-top-color: var(--accent);
@@ -1053,6 +1055,7 @@ img { display: block; max-width: 100%; }
   gap: 20px;
   padding-top: 18px;
   border-top: 1px solid var(--hairline);
+  margin-top: auto;
 }
 .edu-date {
   font-family: var(--sans);
