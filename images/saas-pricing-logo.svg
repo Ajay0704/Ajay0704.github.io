@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SaaS Pricing Intelligence">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- ascending pricing tiers; the top tier (the 'SSO tax' tier) in accent red -->
+  <rect x="30"  y="122" width="26" height="44"  fill="#1a1a1a"/>
+  <rect x="66"  y="98"  width="26" height="68"  fill="#1a1a1a"/>
+  <rect x="102" y="70"  width="26" height="96"  fill="#1a1a1a"/>
+  <rect x="138" y="40"  width="26" height="126" fill="#c0392b"/>
+  <line x1="22" y1="166" x2="178" y2="166" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">SaaS PRICING &#183; 2026</text>
+</svg>

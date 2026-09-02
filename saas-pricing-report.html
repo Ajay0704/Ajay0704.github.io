@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The State of SaaS Pricing 2026 — Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--hair:#e6e4df;--paper:#faf9f6;--accent:#c0392b;--green:#4a7c59}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);line-height:1.65;font-size:16px;background:#fff}
+.bar{height:8px;background:var(--accent)}
+.wrap{max-width:820px;margin:0 auto;padding:0 28px 80px}
+header{padding:56px 0 32px;border-bottom:1px solid var(--hair)}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+h1{font-family:'Playfair Display',serif;font-weight:900;font-size:2.7rem;line-height:1.08;letter-spacing:-.02em}
+.sub{color:var(--muted);margin-top:14px;font-size:1.05rem}
+.meta{margin-top:18px;font-size:.85rem;color:var(--muted)}
+h2{font-family:'Playfair Display',serif;font-weight:900;font-size:1.6rem;margin:46px 0 6px;padding-bottom:10px;position:relative}
+h2::after{content:'';position:absolute;left:0;bottom:0;width:46px;height:3px;background:var(--accent)}
+h3{font-size:1.02rem;font-weight:700;margin:26px 0 8px}
+p{margin:12px 0}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:.92rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--hair)}
+th{background:var(--paper);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.big{font-family:'Playfair Display',serif;font-weight:900;font-size:2rem;color:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--hair);padding:20px 24px;margin:20px 0}
+.card.key{border-left:4px solid var(--accent)}
+.ok{color:var(--green);font-weight:700}
+ul{margin:12px 0 12px 22px}li{margin:7px 0}
+.small{font-size:.85rem;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin:22px 0}
+.kpi{background:#fff;padding:18px}
+.kpi .v{font-family:'Playfair Display',serif;font-weight:900;font-size:1.9rem}
+.kpi .l{font-size:.82rem;color:var(--muted);margin-top:4px}
+a{color:var(--accent)}
+.backtop{display:inline-block;margin-bottom:22px;font-size:.86rem;font-weight:600;color:var(--accent);text-decoration:none}
+.backtop:hover{text-decoration:underline}
+.backnav{margin-top:56px;padding-top:26px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:26px}
+.backnav a{font-size:.9rem;font-weight:600;text-decoration:none}
+.backnav a:hover{text-decoration:underline}
+code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid var(--hair)}
+@media(max-width:620px){.kpis{grid-template-columns:repeat(2,1fr)}h1{font-size:2rem}}
+</style></head><body>
+<div class="bar"></div>
+<div class="wrap">
+<header>
+<a class="backtop" href="saas-pricing-intelligence.html">&larr; Back to the case study</a>
+<div class="eyebrow">Self-collected dataset &middot; Validated</div>
+<h1>The State of SaaS Pricing 2026</h1>
+<p class="sub">Why this project exists, what the data says, and whether the widely-cited industry numbers hold up.</p>
+<p class="meta"><b>191 companies analysed</b> (of 198 attempted &middot; 96%) &middot; 11 categories &middot; snapshot August 2026 &middot; Ajay Karthick</p>
+</header>
+
+<h2>1. Why this project exists</h2>
+<p>In 2026, two questions dominate SaaS pricing: <b>is per-seat pricing dying,</b> and <b>how should companies charge for AI?</b> The industry answers with confident statistics. The most-repeated one is that <b>73% of vendors now charge separately for AI features.</b></p>
+<p>The problem is that nobody can check it. That figure &mdash; and every figure like it &mdash; comes from vendor surveys and aggregator reports whose samples aren't published and whose definitions aren't stated. And when you line up the published estimates for the same question, they don't agree with each other:</p>
+<table>
+<tr><th>Source</th><th>Claim</th><th class="n">Figure</th></tr>
+<tr><td>McKinsey</td><td>Monetised AI as a standalone product</td><td class="n">16%</td></tr>
+<tr><td>High Alpha / Zylo</td><td>Formally monetising AI features</td><td class="n">41%</td></tr>
+<tr><td>BCG</td><td>Restricted AI to premium tiers</td><td class="n">68%</td></tr>
+<tr><td>CloudNuro</td><td>Charge separately for AI</td><td class="n">73%</td></tr>
+</table>
+<p>That is a <b>4.5&times; spread on the same underlying question.</b> They cannot all be right, and there was no public dataset to settle it.</p>
+<div class="card key"><b>So the project's purpose was not to produce charts.</b> It was to build the missing evidence: go to 200 live pricing pages, record what they actually say, and publish a dataset anyone can open and argue with.</div>
+
+<h2>2. What we did</h2>
+<ul>
+<li><b>Sample:</b> 198 recognisable B2B SaaS companies, 18 in each of 11 categories, so no segment dominates the result.</li>
+<li><b>Collection:</b> each company's live pricing page was read and converted into 23 structured fields &mdash; pricing model, tiers, entry price, how AI is charged, where SSO sits. Prices normalised to USD per month.</li>
+<li><b>Recovery:</b> pages that block scrapers or render prices in JavaScript (Salesforce, OpenAI, Adobe, Canva) were recovered with a real browser and manual verification, lifting coverage from 80% to 96%.</li>
+<li><b>Result:</b> 191 usable companies. The 7 unresolved are explained, not hidden: 3 were acquired mid-study (Coda, Airbase, Drift); 4 publish no public price at all (Workday, Namely, Iterable, Paylocity).</li>
+</ul>
+
+<h2>3. What we found</h2>
+<div class="kpis">
+<div class="kpi"><div class="v">42%</div><div class="l">charge primarily per seat</div></div>
+<div class="kpi"><div class="v" style="color:var(--accent)">34%</div><div class="l">charge extra for AI</div></div>
+<div class="kpi"><div class="v" style="color:var(--accent)">69%</div><div class="l">gate SSO to the top tier</div></div>
+<div class="kpi"><div class="v">82%</div><div class="l">show a real public price</div></div>
+<div class="kpi"><div class="v">57%</div><div class="l">offer a free tier</div></div>
+<div class="kpi"><div class="v">87%</div><div class="l">mention AI on the page</div></div>
+</div>
+
+<h3>Finding 1 &mdash; Per-seat pricing is now a minority, but it is not dying</h3>
+<table>
+<tr><th>Primary pricing model</th><th class="n">Companies</th><th class="n">Share</th></tr>
+<tr><td>Per-seat</td><td class="n">81</td><td class="n">42%</td></tr>
+<tr><td>Hybrid (seat + usage)</td><td class="n">44</td><td class="n">23%</td></tr>
+<tr><td>Contact-only (no public price)</td><td class="n">25</td><td class="n">13%</td></tr>
+<tr><td>Usage-based</td><td class="n">23</td><td class="n">12%</td></tr>
+<tr><td>Flat-rate</td><td class="n">18</td><td class="n">9%</td></tr>
+</table>
+<p>Per-seat is still the largest single model, but a majority of companies now price some other way. The detail that matters: the second-place model is <b>hybrid</b>, not pure usage. The market is not swapping seats for meters &mdash; it is layering usage charges <i>on top of</i> a seat-based base. More companies hide their price entirely (25) than run a pure meter (23).</p>
+
+<h3>Finding 2 &mdash; AI is mentioned everywhere but charged for rarely</h3>
+<table>
+<tr><th>How AI is charged (of the 166 that mention it)</th><th class="n">Companies</th><th class="n">Share</th></tr>
+<tr><td>Bundled &mdash; included in the plan you already buy</td><td class="n">94</td><td class="n">57%</td></tr>
+<tr><td>Metered AI credits / tokens</td><td class="n">35</td><td class="n">21%</td></tr>
+<tr><td>Only in a more expensive tier</td><td class="n">17</td><td class="n">10%</td></tr>
+<tr><td>Sold as a separate add-on</td><td class="n">12</td><td class="n">7%</td></tr>
+<tr><td>Unclear from the page</td><td class="n">8</td><td class="n">5%</td></tr>
+</table>
+<p><b>87% mention AI, but only 34% of all 191 companies actually charge extra for it.</b> Bundling (94 companies) outweighs all three paid mechanisms combined (64). And among those who do charge, metering is the clear preference &mdash; selling AI as a separate add-on is the least common approach of all.</p>
+
+<h3>Finding 3 &mdash; The &ldquo;SSO tax&rdquo; is standard practice</h3>
+<p>Single sign-on is a basic security feature. Of the 124 companies that offer it, <b>86 (69%) require their top paid tier or an Enterprise contract to get it.</b></p>
+<table>
+<tr><th>Cheapest plan that unlocks SSO</th><th class="n">Companies</th><th class="n">Share</th></tr>
+<tr><td>Enterprise / contact-sales tier</td><td class="n">57</td><td class="n">46%</td></tr>
+<tr><td>Top paid tier</td><td class="n">29</td><td class="n">23%</td></tr>
+<tr><td>Mid tier</td><td class="n">25</td><td class="n">20%</td></tr>
+<tr><td>All tiers</td><td class="n">12</td><td class="n">10%</td></tr>
+</table>
+<p>This is a floor, not a ceiling. When a page doesn't mention SSO we record it as &ldquo;not mentioned&rdquo; rather than assuming it's gated &mdash; so the true rate can only be higher than 69%, never lower.</p>
+
+<h3>Finding 4 &mdash; Benchmarks that didn't previously exist</h3>
+<p>Median company offers <b>4 tiers</b>, discounts annual billing by <b>20%</b>, and starts paid plans at a median of <b>$10 per month</b>. 82% publish a real price, yet 85% still keep a &ldquo;contact sales&rdquo; tier above it.</p>
+
+<h2>4. Are the other reports wrong?</h2>
+<p>This needs a precise answer, not a slogan.</p>
+<p><b>We are not claiming the published reports are lying.</b> We are claiming three specific things:</p>
+<ul>
+<li><b>They disagree with each other by 4.5&times;</b> (16% to 73%) on the same question. So &ldquo;73%&rdquo; is not settled fact &mdash; it is one estimate among several that contradict one another.</li>
+<li><b>The 73% figure is not reproducible from public pricing pages.</b> We checked 191 of them. If nearly three-quarters of vendors charged separately for AI, it would be visible on those pages. It is not.</li>
+<li><b>The gap is largely definitional.</b> &ldquo;Charges separately for AI&rdquo; can mean <i>&ldquo;has any paid AI option anywhere in the company&rsquo;s catalogue&rdquo;</i> &mdash; which is easy to satisfy. We measured something stricter and more useful to a buyer: <i>&ldquo;the pricing page shows you paying more because of AI.&rdquo;</i> Both numbers can be true; they answer different questions.</li>
+</ul>
+<div class="card"><b>Supporting evidence that our number is the credible one:</b> our measurement of <b>34%</b> sits between McKinsey&rsquo;s 16% and Zylo&rsquo;s 41% &mdash; the two independent research estimates. The outliers are the aggregator figures (68%, 73%). We land inside the cluster of rigorous sources, not outside it.</div>
+
+<h2>5. Our answer</h2>
+<div class="card key">
+<p><span class="big">34%</span></p>
+<p style="margin-top:6px"><b>On a checkable sample of 191 leading SaaS companies, roughly one in three charges extra for AI &mdash; not the widely-cited three in four.</b> The most common decision in the market today is to bundle AI into the existing subscription and compete on it, rather than sell it as a separate line item.</p>
+<p class="small" style="margin-top:10px">And on the other headline question: per-seat pricing is not dying &mdash; it is becoming the base layer of a hybrid model. Meanwhile 69% of vendors gate basic security behind their most expensive plan.</p>
+</div>
+<p><b>What this is useful for.</b> A product manager deciding whether to charge for a new AI feature now has a market answer: most competitors don't, and charging makes you the outlier. A founder setting pricing has benchmarks (4 tiers, 20% annual discount, $10 median entry). A buyer negotiating an Enterprise quote can see that the SSO upcharge is standard practice across 69% of vendors, not a special case. An investor can check whether a company's pricing is normal for its category. None of that was answerable from public sources before.</p>
+
+<h2>6. What we cannot claim</h2>
+<ul>
+<li><b>This describes leading SaaS, not all SaaS.</b> The 198 companies were chosen for recognisability, not at random. Results describe the top of the market, not the median startup.</li>
+<li><b>It is a single-day snapshot</b> (August 2026). Pricing pages change constantly.</li>
+<li><b>Category-level breakdowns are directional only.</b> Some category bars rest on very few companies &mdash; the CRM SSO figure is 6 of 7 companies, HR is 2 of 8. Headline numbers use the full sample and are solid; category splits should not be read as precise.</li>
+<li><b>Extraction is roughly 90% accurate at field level.</b> Every row carries its source URL and a quoted snippet of the text it was read from, so any individual value can be audited.</li>
+<li><b>We cannot prove intent.</b> We can show that 69% gate SSO behind the top tier. We cannot prove from a pricing page <i>why</i> they do it.</li>
+</ul>
+
+<h2>7. Validation record</h2>
+<p>Every headline number was recomputed through three independent paths &mdash; a direct recount from the raw scraped files, the analysis pipeline, and the exported dashboard dataset. All agree exactly.</p>
+<table>
+<tr><th>Metric</th><th class="n">Raw recount</th><th class="n">Pipeline</th><th class="n">Dashboard CSV</th><th>Result</th></tr>
+<tr><td>Usable companies</td><td class="n">191</td><td class="n">191</td><td class="n">191</td><td class="ok">PASS</td></tr>
+<tr><td>Per-seat</td><td class="n">81</td><td class="n">81</td><td class="n">81</td><td class="ok">PASS</td></tr>
+<tr><td>Mention AI</td><td class="n">166</td><td class="n">166</td><td class="n">166</td><td class="ok">PASS</td></tr>
+<tr><td>Bundle AI</td><td class="n">94</td><td class="n">94</td><td class="n">94</td><td class="ok">PASS</td></tr>
+<tr><td>Charge extra for AI</td><td class="n">64</td><td class="n">64</td><td class="n">64</td><td class="ok">PASS</td></tr>
+<tr><td>Mention SSO</td><td class="n">124</td><td class="n">124</td><td class="n">124</td><td class="ok">PASS</td></tr>
+<tr><td>SSO gated to top tier</td><td class="n">86</td><td class="n">86</td><td class="n">86</td><td class="ok">PASS</td></tr>
+<tr><td>Show a public price</td><td class="n">157</td><td class="n">157</td><td class="n">157</td><td class="ok">PASS</td></tr>
+<tr><td>Offer a free tier</td><td class="n">109</td><td class="n">109</td><td class="n">109</td><td class="ok">PASS</td></tr>
+</table>
+<p class="small">Logic checks also pass: pricing models sum to 191; every company recorded as charging for AI also mentions AI; every SSO-tax record also offers SSO. Reproduce with <code>scripts/aggregate_clean.py</code> &rarr; <code>scripts/analyze.py</code> &rarr; <code>scripts/verify.py</code>.</p>
+
+<p class="small" style="margin-top:40px;padding-top:18px;border-top:1px solid var(--hair)">
+Sources for published comparison figures: CloudNuro <i>Essential SaaS Statistics 2026</i>; High Alpha / Zylo <i>2026 SaaS Pricing Trends</i>; BCG (2025) AI tier analysis; McKinsey AI monetisation estimate; Gartner consumption-pricing projection; sso.tax. Primary data: this study, 191 companies, self-collected from live pricing pages, August 2026.</p>
+<nav class="backnav">
+  <a href="saas-pricing-intelligence.html">&larr; Back to the case study</a>
+  <a href="projects.html">All projects</a>
+  <a href="index.html">Home</a>
+  <a href="https://public.tableau.com/views/TheStateofSaasPricing2026/Dashboard1" target="_blank" rel="noopener">View the live dashboard &rarr;</a>
+</nav>
+</div></body></html>
