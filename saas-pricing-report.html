@@ -51,16 +51,14 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 </header>
 
 <h2>1. Why this project exists</h2>
-<p>In 2026, two questions dominate SaaS pricing: <b>is per-seat pricing dying,</b> and <b>how should companies charge for AI?</b> The industry answers with confident statistics. The most-repeated one is that <b>73% of vendors now charge separately for AI features.</b></p>
-<p>The problem is that nobody can check it. That figure &mdash; and every figure like it &mdash; comes from vendor surveys and aggregator reports whose samples aren't published and whose definitions aren't stated. And when you line up the published estimates for the same question, they don't agree with each other:</p>
+<p>In 2026, two questions dominate SaaS pricing: <b>is per-seat pricing dying,</b> and <b>how should companies charge for AI?</b> The industry answers with confident statistics. A widely-cited one, from an ICONIQ Capital survey published by BCG, is that <b>68% of vendors charge separately for AI or restrict it to their premium tiers.</b></p>
+<p>The trouble is these estimates measure different things and don't agree &mdash; and the highest, most-repeated figures come from aggregator pages with no stated method. Line up the two sources that do name a method:</p>
 <table>
-<tr><th>Source</th><th>Claim</th><th class="n">Figure</th></tr>
-<tr><td>McKinsey</td><td>Monetised AI as a standalone product</td><td class="n">16%</td></tr>
-<tr><td>High Alpha / Zylo</td><td>Formally monetising AI features</td><td class="n">41%</td></tr>
-<tr><td>BCG</td><td>Restricted AI to premium tiers</td><td class="n">68%</td></tr>
-<tr><td>CloudNuro</td><td>Charge separately for AI</td><td class="n">73%</td></tr>
+<tr><th>Source</th><th>What it measures</th><th class="n">Figure</th></tr>
+<tr><td>Kyle Poyar, Growth Unhinged <span style="color:var(--muted)">(survey, n=230)</span></td><td>Actually meter AI via credits</td><td class="n">~29%</td></tr>
+<tr><td>ICONIQ Capital <span style="color:var(--muted)">(via BCG, 2025)</span></td><td>Charge separately for AI, or restrict it to premium tiers</td><td class="n">68%</td></tr>
 </table>
-<p>That is a <b>4.5&times; spread on the same underlying question.</b> They cannot all be right, and there was no public dataset to settle it.</p>
+<p>That is more than a <b>2&times; gap</b> between two named sources, driven mostly by <b>definition</b> &mdash; one counts a live AI usage meter, the other also counts &ldquo;AI is only in the premium tier.&rdquo; And unattributed aggregator pages push the figure as high as 73% with no stated method at all. No single number is settled, and there was no public dataset to check them against.</p>
 <div class="card key"><b>So the project's purpose was not to produce charts.</b> It was to build the missing evidence: go to 200 live pricing pages, record what they actually say, and publish a dataset anyone can open and argue with.</div>
 
 <h2>2. What we did</h2>
@@ -121,11 +119,11 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 <p>This needs a precise answer, not a slogan.</p>
 <p><b>We are not claiming the published reports are lying.</b> We are claiming three specific things:</p>
 <ul>
-<li><b>They disagree with each other by 4.5&times;</b> (16% to 73%) on the same question. So &ldquo;73%&rdquo; is not settled fact &mdash; it is one estimate among several that contradict one another.</li>
-<li><b>The 73% figure is not reproducible from public pricing pages.</b> We checked 191 of them. If nearly three-quarters of vendors charged separately for AI, it would be visible on those pages. It is not.</li>
+<li><b>Credible sources disagree, and measure different things.</b> A named 230-company survey (Growth Unhinged) puts it near 29%; an ICONIQ survey via BCG puts it at 68%; unattributed aggregator pages cite 73%. So no single figure is settled fact.</li>
+<li><b>The high figures are not reproducible from public pricing pages.</b> We checked 191 of them. If two-thirds of vendors charged extra for AI, it would be visible on those pages. It is not.</li>
 <li><b>The gap is largely definitional.</b> &ldquo;Charges separately for AI&rdquo; can mean <i>&ldquo;has any paid AI option anywhere in the company&rsquo;s catalogue&rdquo;</i> &mdash; which is easy to satisfy. We measured something stricter and more useful to a buyer: <i>&ldquo;the pricing page shows you paying more because of AI.&rdquo;</i> Both numbers can be true; they answer different questions.</li>
 </ul>
-<div class="card"><b>Supporting evidence that our number is the credible one:</b> our measurement of <b>34%</b> sits between McKinsey&rsquo;s 16% and Zylo&rsquo;s 41% &mdash; the two independent research estimates. The outliers are the aggregator figures (68%, 73%). We land inside the cluster of rigorous sources, not outside it.</div>
+<div class="card"><b>Supporting evidence that our number is the credible one:</b> our measurement of <b>34%</b> lands right next to the one rigorous independent survey &mdash; Kyle Poyar&rsquo;s 230-company survey, in which ~29% actually meter AI &mdash; and at roughly half the self-reported 68% from ICONIQ/BCG. The number you can check tracks the independent survey; the higher figures rely on self-report and looser definitions.</div>
 
 <h2>5. Our answer</h2>
 <div class="card key">
@@ -161,7 +159,7 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 <p class="small">Logic checks also pass: pricing models sum to 191; every company recorded as charging for AI also mentions AI; every SSO-tax record also offers SSO. Reproduce with <code>scripts/aggregate_clean.py</code> &rarr; <code>scripts/analyze.py</code> &rarr; <code>scripts/verify.py</code>.</p>
 
 <p class="small" style="margin-top:40px;padding-top:18px;border-top:1px solid var(--hair)">
-Sources for published comparison figures: CloudNuro <i>Essential SaaS Statistics 2026</i>; High Alpha / Zylo <i>2026 SaaS Pricing Trends</i>; BCG (2025) AI tier analysis; McKinsey AI monetisation estimate; Gartner consumption-pricing projection; sso.tax. Primary data: this study, 191 companies, self-collected from live pricing pages, August 2026.</p>
+Sources for comparison figures: ICONIQ Capital 2025 software survey, as published in BCG, <i>Rethinking B2B Software Pricing in the Era of AI</i> (2025); Kyle Poyar, <i>Growth Unhinged &mdash; The 2026 State of B2B Monetization</i> (survey of 230 companies, 2026). Higher unattributed figures (e.g. 73%) circulate via SaaS-management aggregator pages and are noted but not relied on. Primary data: this study, 191 companies, self-collected from live pricing pages, 2026.</p>
 <nav class="backnav">
   <a href="saas-pricing-intelligence.html">&larr; Back to the case study</a>
   <a href="projects.html">All projects</a>
