@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E-commerce Performance Dashboard">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- review score falling as deliveries get later; the 8+ days late bar in accent red -->
+  <rect x="30"  y="40"  width="26" height="126" fill="#1a1a1a"/>
+  <rect x="66"  y="69"  width="26" height="97"  fill="#1a1a1a"/>
+  <rect x="102" y="104" width="26" height="62"  fill="#1a1a1a"/>
+  <rect x="138" y="116" width="26" height="50"  fill="#c0392b"/>
+  <line x1="22" y1="166" x2="178" y2="166" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">E-COMMERCE &#183; BI</text>
+</svg>
