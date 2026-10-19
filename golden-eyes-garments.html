@@ -68,22 +68,18 @@
       <h2 class="section-title reveal">The Challenge</h2>
       <div class="case-body reveal">
         <p>
-          Golden Eyes Garments is a vertically integrated knitwear manufacturer and exporter based in
-          Tirupur, the knitwear hub of South India. The operation spans design, yarn, fabric, and finished
-          garments across men's, women's, children's, and sustainable product lines, serving international
-          buyers under tight delivery windows. When I joined, the data side of the business was still
-          largely manual. Production tracking lived in scattered spreadsheets, inventory was managed by
-          intuition and end-of-month counts, and weekly reports for the management team were stitched
-          together by hand from multiple sources. The operation was running, but the visibility was
-          reactive. By the time a problem showed up in a report, it had already cost time, fabric, or
-          a shipment window.
+          Golden Eyes Garments is a vertically integrated knitwear manufacturer and exporter in Tirupur,
+          the knitwear hub of South India. It covers design, yarn, fabric, and finished garments across
+          men's, women's, children's, and sustainable lines, and serves international buyers on tight
+          delivery windows.
         </p>
         <p>
-          There was no system. Production counts were written on paper at each stage of the floor, then
-          transferred into Excel sheets by supervisors at the end of each shift. Inventory lived in stock
-          registers updated by hand. Order data sat with the merchandising team in a separate set of
-          files. Nothing was connected, and nothing was queryable. Pulling a single answer often meant
-          chasing three or four people across the operation.
+          When I joined, the data side of the business was still manual. Production counts were written
+          on paper at each stage, then entered into Excel by supervisors at the end of each shift.
+          Inventory was tracked in hand-updated stock registers and planned by intuition, and order data
+          sat in separate files with the merchandising team. Weekly management reports were stitched
+          together by hand. Nothing was connected, so by the time a problem showed up in a report, it had
+          already cost time, fabric, or a shipment window.
         </p>
       </div>
     </div>
@@ -95,43 +91,35 @@
       <h2 class="section-title reveal">What I Did</h2>
       <div class="case-body reveal">
         <p>
-          I spent the first few months on the floor before touching the data. Talking to production
-          supervisors, sitting with the merchandising team, watching how orders moved from cutting to
-          stitching to finishing to packing. That context shaped everything that came after. The most
-          expensive problems were never visible in a single spreadsheet. They lived in the handoffs
-          between stages, in the gap between what the buyer ordered and what inventory could actually
-          support, and in the time the management team spent compiling reports instead of acting on them.
+          I spent my first few months on the floor before touching the data, talking to production
+          supervisors, sitting with the merchandising team, and following orders from cutting to packing.
+          The costliest problems lived in the handoffs between stages, in the gap between what buyers
+          ordered and what inventory could support, and in the hours spent compiling reports.
         </p>
         <p>
-          The first thing I built was the foundation. Standardized data collection templates for the
-          floor and the merchandising team, so every shift, every order, and every stock movement was
-          being recorded in a consistent format. I consolidated the existing scattered sheets into a
-          single working dataset, and used Python to handle the cleanup and transformation work that
-          would have taken weeks by hand. None of this was glamorous, but it was the unlock. Once the
-          data could be trusted, every project after it became possible.
+          <strong>The foundation.</strong> I created standardized data collection templates for the floor
+          and the merchandising team, so every shift, order, and stock movement was recorded the same way.
+          I consolidated the scattered sheets into one dataset and used Python for the cleanup and
+          transformation that would have taken weeks by hand. Trusted data made every later project possible.
         </p>
         <p>
-          The first analytical project tackled production output. I built a structured tracking system
-          across each stage of the manufacturing process and started analyzing where time was being
-          lost. Using Python to join and analyze production logs across stages, I identified bottlenecks
-          that were not obvious from the floor alone, particularly in the handoff between stitching and
-          checking. Working with production supervisors, we adjusted scheduling and line balancing based
-          on what the numbers showed, and output improved by 12% over the following months.
+          <strong>Production output.</strong> I built stage-by-stage production tracking and used Python to
+          join and analyze the logs, which surfaced bottlenecks that were not obvious from the floor,
+          especially between stitching and checking. With the supervisors, we adjusted scheduling and line
+          balancing, and over the following months output rose 12&ndash;15% and on-time delivery improved from 78% to 91%.
         </p>
         <p>
-          The second project was inventory. Stock overages on yarn and fabric were tying up working
-          capital and creating waste at the end of every season. I built a demand forecasting model
-          that combined historical order patterns, seasonality, and the current order book, using Python
-          for the underlying analysis and Excel as the interface the merchandising team could actually
-          work with. Once they trusted the model, excess inventory dropped by 18%.
+          <strong>Inventory.</strong> Excess yarn and fabric were tying up working capital and creating
+          waste at the end of every season. I built a demand forecasting model combining historical order
+          patterns, seasonality, and the current order book, with Python for the analysis and Excel as the
+          merchandising team's interface. Once they trusted it, excess inventory dropped 15&ndash;20%, freeing
+          about $50K&ndash;$75K in working capital.
         </p>
         <p>
-          The third project was reporting. Every week, hours were being spent manually pulling numbers
-          from different files to produce management reports. I rebuilt the reporting layer in Tableau
-          and Excel, pulling directly from the centralized dataset so updates flowed through automatically.
-          The team stopped building reports and started reading them. Manual reporting time dropped by
-          roughly 15 hours a week, a 40% reduction, and the management team finally had a single, trusted
-          view of the operation.
+          <strong>Reporting.</strong> I rebuilt the weekly management reporting in Tableau and Excel,
+          pulling directly from the centralized dataset so updates flowed through automatically. That cut
+          manual reporting time by 8&ndash;10 hours per week and gave the management team a single,
+          trusted view of the operation.
         </p>
       </div>
     </div>
@@ -142,11 +130,11 @@
     <div class="container case-container">
       <h2 class="section-title reveal">Key Outcomes</h2>
       <ul class="case-outcomes reveal">
-        <li>Built the data foundation from scratch &mdash; standardized collection templates, centralized dataset, and clean pipelines where none had existed before.</li>
-        <li>12% improvement in production output through bottleneck analysis and line balancing across manufacturing stages.</li>
-        <li>18% reduction in stock overages via a demand forecasting model that replaced gut-feel inventory planning.</li>
-        <li>40% reduction in manual reporting time by replacing handbuilt weekly reports with connected Tableau and Excel dashboards.</li>
-        <li>End-to-end visibility delivered to the management team, shifting decisions from reactive to proactive.</li>
+        <li>Built the data foundation from scratch &mdash; standardized templates, a centralized dataset, and clean pipelines.</li>
+        <li>12&ndash;15% higher production output and on-time delivery up from 78% to 91% through bottleneck analysis and line balancing.</li>
+        <li>15&ndash;20% reduction in excess inventory via a demand forecasting model that replaced gut-feel planning, freeing about $50K&ndash;$75K in working capital.</li>
+        <li>8&ndash;10 hours per week saved on manual reporting through connected Tableau and Excel dashboards.</li>
+        <li>End-to-end visibility for management, shifting decisions from reactive to proactive.</li>
       </ul>
     </div>
   </section>
