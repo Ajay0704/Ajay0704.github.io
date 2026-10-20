@@ -1,0 +1,9 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Model Market dashboard">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- token share: the US line falls, the China line (accent red) rises past it -->
+  <line x1="22" y1="166" x2="178" y2="166" stroke="#1a1a1a" stroke-width="2"/>
+  <polyline points="30,52 58,60 86,74 114,98 142,118 170,124" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="30,150 58,146 86,132 114,104 142,74 170,60" fill="none" stroke="#c0392b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">AI MODELS &#183; BI</text>
+</svg>
