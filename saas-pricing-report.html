@@ -67,13 +67,13 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 <li><b>Collection:</b> each company's live pricing page was read and converted into 19 structured fields (23 columns in the public dataset) &mdash; pricing model, tiers, entry price, how AI is charged, where SSO sits. Prices normalised to USD per month.</li>
 <li><b>Recovery:</b> pages that block scrapers or render prices in JavaScript (Salesforce, OpenAI, Adobe, Canva) were recovered with a real browser, and 14 hard-blocked pages were collected by hand, lifting coverage from 80% to 95%.</li>
 <li><b>Result:</b> 188 usable companies. The 10 unresolved are explained, not hidden: 3 were acquired mid-study (Coda, Airbase, Drift); 4 pricing pages returned errors or no pricing content (Workday, Namely, Iterable, Paylocity); 3 never rendered their prices, even in archived copies (Evernote, ActiveCampaign, Dashlane).</li>
-<li><b>Audit:</b> in October 2026 every disputed row was re-checked against the Wayback Machine copy of the page nearest 18 August 2026, or against the saved quote. 111 field corrections across 78 companies are logged in <code>data/corrections.csv</code> with the value replaced, the reason and the source.</li>
+<li><b>Audit:</b> in October 2026 every disputed row was re-checked against the Wayback Machine copy of the page nearest 18 August 2026, or against the saved quote. A blinded recheck of 30 random rows then showed the AI field was under-counted, so all 94 AI rows coded as bundled or unclear were re-coded, blind, from the archived pages. 137 field corrections across 89 companies are logged in <code>data/corrections.csv</code> with the value replaced, the reason and the source.</li>
 </ul>
 
 <h2>3. What we found</h2>
 <div class="kpis">
 <div class="kpi"><div class="v">46%</div><div class="l">charge primarily per seat</div></div>
-<div class="kpi"><div class="v" style="color:var(--accent)">42%</div><div class="l">of AI-offering companies charge extra for AI</div></div>
+<div class="kpi"><div class="v" style="color:var(--accent)">57%</div><div class="l">of AI-offering companies charge extra for AI</div></div>
 <div class="kpi"><div class="v" style="color:var(--accent)">69%</div><div class="l">of pages that list SSO gate it to the top tier</div></div>
 <div class="kpi"><div class="v">85%</div><div class="l">show a real public price</div></div>
 <div class="kpi"><div class="v">57%</div><div class="l">offer a free tier</div></div>
@@ -91,16 +91,17 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 </table>
 <p>Per-seat is still the largest single model, but a majority of companies now price some other way. The detail that matters: the second-place model is <b>hybrid</b>, not pure usage. The market is not swapping seats for meters &mdash; it is layering usage charges <i>on top of</i> a subscription. Counting hybrids that also bill per seat, about 6 in 10 companies whose page shows how they charge (101 of 169) still charge per seat somewhere.</p>
 
-<h3>Finding 2 &mdash; AI is mentioned everywhere, but only a minority charge extra for it</h3>
+<h3>Finding 2 &mdash; Most companies that offer AI now charge extra for it</h3>
 <table>
-<tr><th>How AI is charged (of the 162 that mention it)</th><th class="n">Companies</th><th class="n">Share</th></tr>
-<tr><td>Bundled &mdash; included in the plan you already buy</td><td class="n">76</td><td class="n">47%</td></tr>
-<tr><td>Metered AI credits / tokens (with a way to buy more)</td><td class="n">34</td><td class="n">21%</td></tr>
-<tr><td>Sold as a separate add-on</td><td class="n">18</td><td class="n">11%</td></tr>
-<tr><td>Only in a more expensive tier</td><td class="n">16</td><td class="n">10%</td></tr>
-<tr><td>Unclear from the page</td><td class="n">18</td><td class="n">11%</td></tr>
+<tr><th>How AI is charged (of the 161 that mention it)</th><th class="n">Companies</th><th class="n">Share</th></tr>
+<tr><td>Bundled &mdash; included in the plan you already buy</td><td class="n">55</td><td class="n">34%</td></tr>
+<tr><td>Metered AI credits / tokens (with a way to buy more)</td><td class="n">43</td><td class="n">27%</td></tr>
+<tr><td>Sold as a separate add-on</td><td class="n">28</td><td class="n">17%</td></tr>
+<tr><td>Only in a more expensive tier</td><td class="n">21</td><td class="n">13%</td></tr>
+<tr><td>Unclear from the page</td><td class="n">14</td><td class="n">9%</td></tr>
 </table>
-<p><b>86% mention AI, but only 42% of those (68 of 162) charge extra for it &mdash; 36% of all 188 companies.</b> Bundling (76 companies) still outweighs all three paid mechanisms combined (68). Among those who do charge, metered credits are the most common route (34), ahead of separate add-ons (18) and premium-tier-only AI (16). Excluding AI-native companies, where AI is the product itself, the rate is about the same (42%).</p>
+<p><b>86% mention AI, and 57% of those (92 of 161) charge extra for it &mdash; 49% of all 188 companies.</b> Bundling is still the largest single approach (55 companies), but the three paid mechanisms together now outnumber it (92). Metered credits with a way to buy more are the most common paid route (43), ahead of separate add-ons (28) and premium-tier-only AI (21). Excluding AI-native companies, where AI is the product itself, the rate is the same (57%).</p>
+<p><b>How firm is 57%?</b> The first pass put this figure at 42%. A blinded recheck showed it under-counted add-ons and &ldquo;buy more credits&rdquo; options, so every AI row coded as bundled or unclear was re-coded from the archived August page, and only high- and medium-confidence re-codes were applied (95% range 49&ndash;65%). The strictest reading, applying only high-confidence re-codes, gives 46%; not counting add-ons that show no price gives 53%; also applying rows checked on today&rsquo;s live pages gives 64%. Every version sits below 68%, but the gap is a matter of degree, not a different world.</p>
 
 <h3>Finding 3 &mdash; The &ldquo;SSO tax&rdquo; is standard practice</h3>
 <p>Single sign-on is a basic security feature. Of the 120 companies whose pricing page mentions it, <b>83 (69%) require their top paid tier or an Enterprise contract to get it.</b></p>
@@ -121,25 +122,25 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 <p><b>We are not claiming the published reports are lying.</b> We are claiming three specific things:</p>
 <ul>
 <li><b>Credible sources disagree, and measure different things.</b> A named 230-company survey (Growth Unhinged) finds 29% use AI credits; an ICONIQ survey via BCG finds 68% charge separately or keep AI to premium tiers; unattributed aggregator pages cite 73%. So no single figure is settled fact.</li>
-<li><b>Public pricing pages show a lower rate.</b> We checked 188 of them. Some AI pricing, especially in enterprise contracts, never appears on a public page, so this study measures visible pricing only.</li>
+<li><b>Public pricing pages show a somewhat lower rate.</b> We checked 188 of them. Some AI pricing, especially in enterprise contracts, never appears on a public page, so this study measures visible pricing only.</li>
 <li><b>The gap comes from definitions, populations and method.</b> The surveys asked executives at the companies they sampled; we read the public pricing pages of well-known SaaS companies and recorded whether <i>&ldquo;the pricing page shows you paying more because of AI.&rdquo;</i> Both numbers can be true; they answer different questions.</li>
 </ul>
-<div class="card"><b>Like for like:</b> on the same measure as Poyar&rsquo;s survey, public pricing pages show <b>21%</b> of AI-offering companies using AI credits, versus his 29%. On ICONIQ&rsquo;s broader measure, <b>42%</b> charge extra in any form, versus 68%. Our figures come from a different method and a different set of companies, so the comparison shows how far visible pricing sits from self-reported pricing, not that either survey is wrong.</div>
+<div class="card"><b>Like for like:</b> on the same measure as Poyar&rsquo;s survey, public pricing pages show <b>27%</b> of AI-offering companies using AI credits, about the same as his 29%. On ICONIQ&rsquo;s broader measure, <b>57%</b> charge extra in any form, versus 68%. Our figures come from a different method and a different set of companies, so the comparison shows how far visible pricing sits from self-reported pricing, not that either survey is wrong.</div>
 
 <h2>5. Our answer</h2>
 <div class="card key">
-<p><span class="big">42%</span></p>
-<p style="margin-top:6px"><b>On a checkable sample of 188 leading SaaS companies, 42% of those that offer AI visibly charge extra for it on their pricing page &mdash; well below the 68% reported in surveys.</b> The most common single decision is still to bundle AI into the existing subscription, rather than sell it as a separate line item.</p>
+<p><span class="big">57%</span></p>
+<p style="margin-top:6px"><b>On a checkable sample of 188 leading SaaS companies, 57% of those that offer AI visibly charge extra for it on their pricing page &mdash; below the 68% reported in surveys.</b> Bundling is still the most common single choice (34%), but most companies now charge for AI through metered credits, add-ons or premium tiers.</p>
 <p class="small" style="margin-top:10px">And on the other headline question: per-seat is still the largest single model (46%) but not a majority; second is a subscription-plus-usage hybrid (22%). Among pages that list SSO, 69% gate it to their most expensive plan.</p>
 </div>
-<p><b>What this is useful for.</b> A product manager deciding whether to charge for a new AI feature now has a market answer: most competitors don't visibly charge extra for it. A founder setting pricing has benchmarks (4 tiers, $14 median entry price, 20% median annual discount among companies that state one). A buyer negotiating an Enterprise quote can see that the SSO upcharge is standard practice across 69% of vendors that list SSO, not a special case. An investor can check whether a company's pricing is normal for its category. None of that was answerable from public sources before.</p>
+<p><b>What this is useful for.</b> A product manager deciding whether to charge for a new AI feature now has a market answer: just over half of competitors visibly charge extra, most often through metered credits with a way to buy more. A founder setting pricing has benchmarks (4 tiers, $14 median entry price, 20% median annual discount among companies that state one). A buyer negotiating an Enterprise quote can see that the SSO upcharge is standard practice across 69% of vendors that list SSO, not a special case. An investor can check whether a company's pricing is normal for its category. None of that was answerable from public sources before.</p>
 
 <h2>6. What we cannot claim</h2>
 <ul>
 <li><b>This describes leading SaaS, not all SaaS.</b> The 198 companies were chosen for recognisability, not at random. Results describe the top of the market, not the median startup.</li>
 <li><b>It is a single-day snapshot</b> (August 2026). Pricing pages change constantly.</li>
 <li><b>Category-level breakdowns are directional only.</b> Some category bars rest on very few companies &mdash; the CRM SSO figure is 6 of 7 companies, HR is 2 of 7. Headline numbers use the full sample; category splits should not be read as precise.</li>
-<li><b>Field-level accuracy is being measured.</b> A separate accuracy audit of a random sample of rows is under way. Every row in the working dataset stores its source URL and a quoted snippet of the text it was read from, so any individual value can be checked.</li>
+<li><b>Field-level accuracy was measured, not assumed.</b> A blinded recheck of 30 random rows against archived pages agreed with the dataset on 100% of public-price, 90% of SSO-tax, 89% of entry-price and 86% of pricing-model codes. The AI field scored 71% before the full AI re-code described in Finding 2. Every row in the working dataset stores its source URL and a quoted snippet of the text it was read from, so any individual value can be checked.</li>
 <li><b>We cannot prove intent.</b> We can show that 69% of pages listing SSO gate it behind the top tier. We cannot prove from a pricing page <i>why</i> they do it.</li>
 </ul>
 
@@ -149,9 +150,9 @@ code{background:var(--paper);padding:1px 5px;font-size:.86rem;border:1px solid v
 <tr><th>Metric</th><th class="n">Dataset recount</th><th class="n">Pipeline</th><th class="n">Dashboard CSV</th><th>Result</th></tr>
 <tr><td>Usable companies</td><td class="n">188</td><td class="n">188</td><td class="n">188</td><td class="ok">PASS</td></tr>
 <tr><td>Per-seat</td><td class="n">86</td><td class="n">86</td><td class="n">86</td><td class="ok">PASS</td></tr>
-<tr><td>Mention AI</td><td class="n">162</td><td class="n">162</td><td class="n">162</td><td class="ok">PASS</td></tr>
-<tr><td>Bundle AI</td><td class="n">76</td><td class="n">76</td><td class="n">76</td><td class="ok">PASS</td></tr>
-<tr><td>Charge extra for AI</td><td class="n">68</td><td class="n">68</td><td class="n">68</td><td class="ok">PASS</td></tr>
+<tr><td>Mention AI</td><td class="n">161</td><td class="n">161</td><td class="n">161</td><td class="ok">PASS</td></tr>
+<tr><td>Bundle AI</td><td class="n">55</td><td class="n">55</td><td class="n">55</td><td class="ok">PASS</td></tr>
+<tr><td>Charge extra for AI</td><td class="n">92</td><td class="n">92</td><td class="n">92</td><td class="ok">PASS</td></tr>
 <tr><td>Mention SSO</td><td class="n">120</td><td class="n">120</td><td class="n">120</td><td class="ok">PASS</td></tr>
 <tr><td>SSO gated to top tier</td><td class="n">83</td><td class="n">83</td><td class="n">83</td><td class="ok">PASS</td></tr>
 <tr><td>Show a public price</td><td class="n">160</td><td class="n">160</td><td class="n">160</td><td class="ok">PASS</td></tr>
