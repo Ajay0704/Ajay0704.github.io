@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The State of SaaS Pricing 2026 &mdash; Case Study &mdash; Ajay Karthick</title>
-  <meta name="description" content="A self-collected dataset of 191 SaaS pricing pages, with an interactive Tableau dashboard. Finds that 39% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in surveys." />
+  <meta name="description" content="A self-collected dataset of 188 SaaS pricing pages, with an interactive dashboard. Finds that 42% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in surveys." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,6 +20,8 @@
     .viz-frame{border:1px solid var(--hairline);background:var(--bg-paper);margin-top:40px}
     .viz-frame iframe{display:block;width:100%;height:880px;border:0}
     .viz-cap{padding:14px 20px;border-top:1px solid var(--hairline);font-size:.84rem;color:var(--muted)}
+    .dash-teaser ul{margin:0;padding:24px 24px 8px 44px;line-height:1.7;font-size:.95rem}
+    .dash-teaser .btn{margin:10px 24px 22px}
     .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
     .claimbox{border-left:4px solid var(--accent);background:var(--bg-paper);padding:26px 30px;margin-top:36px}
     .claimbox .n{font-family:var(--serif);font-weight:900;font-size:2.6rem;color:var(--accent);line-height:1}
@@ -56,15 +58,15 @@
       </div>
       <div class="case-hero-meta">
         <p class="page-eyebrow">Self-Built &middot; SaaS Pricing &amp; Monetization</p>
-        <h1 class="page-title">How 191 SaaS Companies Really Price in 2026</h1>
-        <p class="case-org">Self-Built &middot; Open Dataset &middot; Tableau</p>
+        <h1 class="page-title">How 188 SaaS Companies Really Price in 2026</h1>
+        <p class="case-org">Self-Built &middot; Open Dataset &middot; Interactive Dashboard</p>
         <ul class="case-meta-list">
           <li><span class="case-meta-label">Location</span><span class="case-meta-value">Boston, MA</span></li>
           <li><span class="case-meta-label">Year</span><span class="case-meta-value">2026</span></li>
           <li><span class="case-meta-label">Type</span><span class="case-meta-value">Self-Built Project</span></li>
         </ul>
         <div class="btn-row">
-          <a href="https://public.tableau.com/views/TheStateofSaasPricing2026/Dashboard1" target="_blank" rel="noopener" class="btn btn-primary">View live dashboard &rarr;</a>
+          <a href="saas-pricing-dashboard.html" class="btn btn-primary">Open the dashboard &rarr;</a>
           <a href="saas-pricing-report.html" class="btn btn-secondary">Read the full report</a>
         </div>
       </div>
@@ -90,8 +92,8 @@
       <div class="case-body reveal">
         <p><strong>Sampling.</strong> 198 recognisable B2B SaaS companies, 18 in each of 11 categories &mdash; dev tools, data &amp; analytics, CRM, martech, collaboration, design, security, HR, fintech-ops, support and AI-native &mdash; equal numbers per category, so no single segment dominates the totals.</p>
         <p><strong>Collection.</strong> Each live pricing page was read and converted into 19 structured fields (23 columns in the public dataset): pricing model, tier names, entry price, how AI is charged, where SSO sits. Prices normalised to USD per month. No third-party datasets, no synthetic data.</p>
-        <p><strong>Recovery.</strong> The most valuable pages fight back &mdash; Salesforce, OpenAI, Adobe and Canva block scrapers or render prices in JavaScript. Those were recovered with a headless browser, and 14 hard-blocked pages were collected by hand, lifting coverage from 80% to 96%.</p>
-        <p><strong>Validation.</strong> Every headline count was recomputed from the published dataset and matches the analysis pipeline exactly. That confirms the arithmetic, not the accuracy of each coded field, so a separate accuracy audit of a random sample of rows is under way. Every row in the working dataset stores its source URL and a quoted snippet of the page text, so any value can be checked.</p>
+        <p><strong>Recovery.</strong> The most valuable pages fight back &mdash; Salesforce, OpenAI, Adobe and Canva block scrapers or render prices in JavaScript. Those were recovered with a headless browser, and 14 hard-blocked pages were collected by hand, lifting coverage from 80% to 95%.</p>
+        <p><strong>Validation.</strong> Every headline count was recomputed from the published dataset and matches the analysis pipeline exactly. That confirms the arithmetic, not the accuracy of each coded field, so a separate accuracy audit of a random sample of rows is under way. Every row in the working dataset stores its source URL and a quoted snippet of the page text, so any value can be checked. In October 2026 an audit re-checked every disputed row against archived copies of the August pages; the 111 resulting field corrections are logged with their sources.</p>
       </div>
     </div>
   </section>
@@ -100,12 +102,12 @@
   <section class="section case-section">
     <div class="container case-container">
       <h2 class="section-title reveal">Key Findings</h2>
-      <div class="case-body reveal"><p>From 191 companies with usable pricing data (96% of the sample), across 11 categories.</p></div>
+      <div class="case-body reveal"><p>From 188 companies with usable pricing data (95% of the sample), across 11 categories.</p></div>
       <div class="kpi-grid reveal">
-        <div class="kpi-cell"><div class="v">42%</div><div class="k">charge per seat</div><div class="d">Still the largest model &mdash; but now a minority. Hybrid is second at 23%.</div></div>
-        <div class="kpi-cell"><div class="v red">39%</div><div class="k">of AI-offering companies charge extra for AI</div><div class="d">Versus 68% self-reported in surveys. Most bundle AI into the existing plan.</div></div>
-        <div class="kpi-cell"><div class="v red">69%</div><div class="k">of pages that list SSO gate it to the top tier</div><div class="d">The &ldquo;SSO tax&rdquo;: 86 of 124 companies, or at least 45% of all 191.</div></div>
-        <div class="kpi-cell"><div class="v">82%</div><div class="k">show a public price</div><div class="d">Yet 85% still keep a &ldquo;contact sales&rdquo; tier above it.</div></div>
+        <div class="kpi-cell"><div class="v">46%</div><div class="k">charge per seat</div><div class="d">Still the largest model &mdash; but a minority. Hybrid is second at 22%.</div></div>
+        <div class="kpi-cell"><div class="v red">42%</div><div class="k">of AI-offering companies charge extra for AI</div><div class="d">Versus 68% self-reported in surveys. Bundling is still the most common approach (47%).</div></div>
+        <div class="kpi-cell"><div class="v red">69%</div><div class="k">of pages that list SSO gate it to the top tier</div><div class="d">The &ldquo;SSO tax&rdquo;: 83 of 120 companies, or at least 44% of all 188.</div></div>
+        <div class="kpi-cell"><div class="v">85%</div><div class="k">show a public price</div><div class="d">Yet 85% still keep a &ldquo;contact sales&rdquo; tier above it.</div></div>
         <div class="kpi-cell"><div class="v">57%</div><div class="k">offer a free tier</div><div class="d">Concentrated in dev tools, collaboration and AI-native products.</div></div>
       </div>
     </div>
@@ -116,13 +118,19 @@
     <div class="container case-container">
       <h2 class="section-title reveal">The Interactive Dashboard</h2>
       <div class="case-body reveal">
-        <p>I built the analysis into a Tableau dashboard, published live on Tableau Public. It is fully interactive &mdash; filter the whole dataset by category and explore every finding below.</p>
+        <p>I built the corrected data into an interactive dashboard. Filter by category or company stage and every chart, headline number and the company table update together.</p>
       </div>
-      <div class="viz-frame reveal">
-        <iframe title="The State of SaaS Pricing 2026"
-          src="https://public.tableau.com/views/TheStateofSaasPricing2026/Dashboard1?:embed=y&amp;:showVizHome=no&amp;:toolbar=bottom"
-          loading="lazy"></iframe>
-        <div class="viz-cap">Live Tableau Public dashboard &mdash; 191 companies, 11 categories. <a href="https://public.tableau.com/views/TheStateofSaasPricing2026/Dashboard1" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Open full screen &rarr;</a></div>
+      <div class="viz-frame dash-teaser reveal">
+        <ul>
+          <li><b>How they charge</b> &mdash; a unit chart with one square per company, by pricing model</li>
+          <li><b>AI pricing vs surveys</b> &mdash; this study&rsquo;s rate and its 95% range beside ICONIQ/BCG and Poyar</li>
+          <li><b>How AI is charged</b> &mdash; credits, add-ons, premium tiers or bundled</li>
+          <li><b>Category fingerprints</b> &mdash; a heatmap of six pricing practices across 11 categories</li>
+          <li><b>Entry price by model</b> &mdash; every company&rsquo;s cheapest paid plan on a log scale</li>
+          <li><b>The SSO ladder</b> &mdash; at which plan level single sign-on becomes available</li>
+        </ul>
+        <a href="saas-pricing-dashboard.html" class="btn btn-primary">Open the dashboard &rarr;</a>
+        <div class="viz-cap">188 companies, 11 categories, August 2026 snapshot corrected in October 2026. An earlier Tableau version, built on the pre-audit data, is still on <a href="https://public.tableau.com/views/TheStateofSaasPricing2026/Dashboard1" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Tableau Public</a>.</div>
       </div>
     </div>
   </section>
@@ -137,13 +145,13 @@
       <table class="cmp reveal">
         <tr><th>Source</th><th>What it measures</th><th class="num">Figure</th></tr>
         <tr><td>Kyle Poyar, Growth Unhinged <span style="color:var(--muted)">(self-reported survey, n=230)</span></td><td>Use AI credits</td><td class="num">29%</td></tr>
-        <tr class="mine"><td>This study <span style="color:var(--muted)">(166 pricing pages that mention AI)</span></td><td>Pricing page uses AI credits</td><td class="num">21%</td></tr>
+        <tr class="mine"><td>This study <span style="color:var(--muted)">(162 pricing pages that mention AI)</span></td><td>Pricing page uses AI credits</td><td class="num">21%</td></tr>
         <tr><td>ICONIQ Capital <span style="color:var(--muted)">(via BCG, 2025; self-reported, AI-building companies)</span></td><td>Charge separately for AI, or restrict it to premium tiers</td><td class="num">68%</td></tr>
-        <tr class="mine"><td>This study <span style="color:var(--muted)">(166 pricing pages that mention AI)</span></td><td>Pricing page charges extra for AI in any form</td><td class="num">39%</td></tr>
+        <tr class="mine"><td>This study <span style="color:var(--muted)">(162 pricing pages that mention AI)</span></td><td>Pricing page charges extra for AI in any form</td><td class="num">42%</td></tr>
       </table>
       <div class="claimbox reveal">
-        <div class="n">39% vs 68%</div>
-        <p style="margin-top:10px"><strong>Like for like, public pricing pages show fewer companies using AI credits (21%) than Poyar&rsquo;s survey reports (29%), and fewer charging extra in any form (39%) than ICONIQ reports (68%).</strong> Both surveys are self-reported and sample different companies. Part of the gap is likely AI sold in enterprise contracts that never appears on a public pricing page, so this measures visible pricing only.</p>
+        <div class="n">42% vs 68%</div>
+        <p style="margin-top:10px"><strong>Like for like, public pricing pages show fewer companies using AI credits (21%) than Poyar&rsquo;s survey reports (29%), and fewer charging extra in any form (42%) than ICONIQ reports (68%).</strong> Both surveys are self-reported and sample different companies. Part of the gap is likely AI sold in enterprise contracts that never appears on a public pricing page, so this measures visible pricing only.</p>
       </div>
     </div>
   </section>
@@ -153,12 +161,12 @@
     <div class="container case-container">
       <h2 class="section-title reveal">Key Outcomes</h2>
       <ul class="case-outcomes reveal">
-        <li>Self-collected a dataset of 191 SaaS companies &times; 23 columns, every value traced to a pricing page &mdash; 96% coverage of the sampling frame.</li>
-        <li>Found that 39% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in self-reported surveys.</li>
-        <li>Quantified the &ldquo;SSO tax&rdquo; (69% of pages that list SSO gate it to the top tier) and built benchmarks that did not previously exist publicly (median 4 tiers; $14 median entry price; 20% median annual discount among the 84 companies that state one).</li>
-        <li>Published an interactive Tableau dashboard so anyone can filter the data and check the findings themselves.</li>
+        <li>Self-collected a dataset of 188 SaaS companies &times; 26 columns, every value traced to a pricing page &mdash; 95% coverage of the sampling frame.</li>
+        <li>Found that 42% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in self-reported surveys.</li>
+        <li>Quantified the &ldquo;SSO tax&rdquo; (69% of pages that list SSO gate it to the top tier) and built benchmarks that did not previously exist publicly (median 4 tiers; $14 median entry price; 20% median annual discount among the 85 companies that state one).</li>
+        <li>Built an interactive dashboard so anyone can filter the data by category and check the findings themselves.</li>
         <li>Documented limitations openly, including sample bias and small category sample sizes.</li>
-        <li>Published the full dataset for anyone to check: <a href="saas-pricing-dataset.csv" download style="color:var(--accent);font-weight:600">download the 191-company CSV &darr;</a></li>
+        <li>Published the full dataset for anyone to check: <a href="saas-pricing-dataset.csv" download style="color:var(--accent);font-weight:600">download the 188-company CSV &darr;</a></li>
       </ul>
     </div>
   </section>
