@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The State of SaaS Pricing 2026 &mdash; Case Study &mdash; Ajay Karthick</title>
-  <meta name="description" content="A self-collected dataset of 191 SaaS pricing pages, with an interactive Tableau dashboard. Finds that only 34% of companies charge extra for AI, well below self-reported industry figures near 68%." />
+  <meta name="description" content="A self-collected dataset of 191 SaaS pricing pages, with an interactive Tableau dashboard. Finds that 39% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in surveys." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -76,8 +76,8 @@
     <div class="container case-container">
       <h2 class="section-title reveal">The Challenge</h2>
       <div class="case-body reveal">
-        <p>Every SaaS company in 2026 is asking the same two questions: is per-seat pricing dying, and how should we charge for AI? The industry answers with confident statistics &mdash; for example, an ICONIQ Capital survey published by BCG found <strong>68% of vendors charge separately for AI or restrict it to premium tiers.</strong></p>
-        <p>The trouble is the credible estimates measure different things and don&rsquo;t agree &mdash; a named 230-company survey by Kyle Poyar puts it near 29%, while the ICONIQ/BCG figure is 68% &mdash; and the highest numbers come from aggregator pages with no stated method. There was no open dataset to settle it.</p>
+        <p>Every SaaS company in 2026 is asking the same two questions: is per-seat pricing dying, and how should we charge for AI? The industry answers with confident statistics &mdash; for example, an ICONIQ Capital survey of roughly 300 AI-building software companies, published by BCG, found <strong>68% of vendors charge separately for AI or restrict it to premium tiers.</strong></p>
+        <p>The trouble is the credible estimates measure different things and don&rsquo;t agree &mdash; Kyle Poyar&rsquo;s 230-company survey finds 29% use AI credits, a narrower measure, while the ICONIQ/BCG figure is 68% &mdash; and the highest numbers come from aggregator pages with no stated method. There was no open dataset to settle it.</p>
         <p>So I built one: I collected pricing data from 198 leading SaaS companies directly from their live pricing pages, and used it to answer the questions with evidence instead of citation.</p>
       </div>
     </div>
@@ -88,10 +88,10 @@
     <div class="container case-container">
       <h2 class="section-title reveal">What I Did</h2>
       <div class="case-body reveal">
-        <p><strong>Sampling.</strong> 198 recognisable B2B SaaS companies, 18 in each of 11 categories &mdash; dev tools, data &amp; analytics, CRM, martech, collaboration, design, security, HR, fintech-ops, support and AI-native &mdash; balanced so no segment skews the result.</p>
-        <p><strong>Collection.</strong> Each live pricing page was read and converted into 23 structured fields: pricing model, tier names, entry price, how AI is charged, where SSO sits. Prices normalised to USD per month. No third-party datasets, no synthetic data.</p>
-        <p><strong>Recovery.</strong> The most valuable pages fight back &mdash; Salesforce, OpenAI, Adobe and Canva block scrapers or render prices in JavaScript. Those were recovered with a headless browser and manual verification, lifting coverage from 80% to 96%.</p>
-        <p><strong>Validation.</strong> Every headline number was recomputed through three independent paths &mdash; a direct recount from the raw files, the analysis pipeline, and the exported dashboard dataset &mdash; and all three agree exactly. Field-level extraction accuracy is roughly 90%, and every row carries its source URL and a quoted snippet so any value can be audited.</p>
+        <p><strong>Sampling.</strong> 198 recognisable B2B SaaS companies, 18 in each of 11 categories &mdash; dev tools, data &amp; analytics, CRM, martech, collaboration, design, security, HR, fintech-ops, support and AI-native &mdash; equal numbers per category, so no single segment dominates the totals.</p>
+        <p><strong>Collection.</strong> Each live pricing page was read and converted into 19 structured fields (23 columns in the public dataset): pricing model, tier names, entry price, how AI is charged, where SSO sits. Prices normalised to USD per month. No third-party datasets, no synthetic data.</p>
+        <p><strong>Recovery.</strong> The most valuable pages fight back &mdash; Salesforce, OpenAI, Adobe and Canva block scrapers or render prices in JavaScript. Those were recovered with a headless browser, and 14 hard-blocked pages were collected by hand, lifting coverage from 80% to 96%.</p>
+        <p><strong>Validation.</strong> Every headline count was recomputed from the published dataset and matches the analysis pipeline exactly. That confirms the arithmetic, not the accuracy of each coded field, so a separate accuracy audit of a random sample of rows is under way. Every row in the working dataset stores its source URL and a quoted snippet of the page text, so any value can be checked.</p>
       </div>
     </div>
   </section>
@@ -103,8 +103,8 @@
       <div class="case-body reveal"><p>From 191 companies with usable pricing data (96% of the sample), across 11 categories.</p></div>
       <div class="kpi-grid reveal">
         <div class="kpi-cell"><div class="v">42%</div><div class="k">charge per seat</div><div class="d">Still the largest model &mdash; but now a minority. Hybrid is second at 23%.</div></div>
-        <div class="kpi-cell"><div class="v red">34%</div><div class="k">charge extra for AI</div><div class="d">Well below the self-reported 68%. Most bundle AI into the existing plan.</div></div>
-        <div class="kpi-cell"><div class="v red">69%</div><div class="k">gate SSO to the top tier</div><div class="d">The &ldquo;SSO tax&rdquo; &mdash; and this figure is a conservative floor.</div></div>
+        <div class="kpi-cell"><div class="v red">39%</div><div class="k">of AI-offering companies charge extra for AI</div><div class="d">Versus 68% self-reported in surveys. Most bundle AI into the existing plan.</div></div>
+        <div class="kpi-cell"><div class="v red">69%</div><div class="k">of pages that list SSO gate it to the top tier</div><div class="d">The &ldquo;SSO tax&rdquo;: 86 of 124 companies, or at least 45% of all 191.</div></div>
         <div class="kpi-cell"><div class="v">82%</div><div class="k">show a public price</div><div class="d">Yet 85% still keep a &ldquo;contact sales&rdquo; tier above it.</div></div>
         <div class="kpi-cell"><div class="v">57%</div><div class="k">offer a free tier</div><div class="d">Concentrated in dev tools, collaboration and AI-native products.</div></div>
       </div>
@@ -132,17 +132,18 @@
     <div class="container case-container">
       <h2 class="section-title reveal">Where the Published Numbers Break Down</h2>
       <div class="case-body reveal">
-        <p>The headline finding is that the most-cited statistic in SaaS pricing overstates what a customer actually pays. I am not claiming the reports are dishonest &mdash; I am claiming three specific things: credible sources disagree (a 230-company survey says ~29%, ICONIQ/BCG says 68%), the higher figures are not reproducible from public pricing pages, and the gap is largely definitional. Self-reported &ldquo;we monetise AI&rdquo; is a much easier bar than &ldquo;the pricing page actually charges you more.&rdquo;</p>
+        <p>The headline finding is that the most-cited AI-pricing statistic is far higher than what public pricing pages show. I am not claiming the reports are dishonest &mdash; I am claiming three specific things: credible sources disagree (a 230-company survey says 29% use AI credits, ICONIQ/BCG says 68% charge separately or premium-only), the higher figures are not reproducible from public pricing pages, and the gap comes from different definitions, populations and methods. Self-reported &ldquo;we monetise AI&rdquo; is a much easier bar than &ldquo;the pricing page actually charges you more.&rdquo;</p>
       </div>
       <table class="cmp reveal">
         <tr><th>Source</th><th>What it measures</th><th class="num">Figure</th></tr>
-        <tr><td>Kyle Poyar, Growth Unhinged <span style="color:var(--muted)">(survey, n=230)</span></td><td>Companies that actually meter AI via credits</td><td class="num">~29%</td></tr>
-        <tr class="mine"><td>This study <span style="color:var(--muted)">(n=191)</span></td><td>Pricing page actually charges the customer extra for AI</td><td class="num">34%</td></tr>
-        <tr><td>ICONIQ Capital <span style="color:var(--muted)">(via BCG, 2025)</span></td><td>Charge separately for AI, or restrict it to premium tiers</td><td class="num">68%</td></tr>
+        <tr><td>Kyle Poyar, Growth Unhinged <span style="color:var(--muted)">(self-reported survey, n=230)</span></td><td>Use AI credits</td><td class="num">29%</td></tr>
+        <tr class="mine"><td>This study <span style="color:var(--muted)">(166 pricing pages that mention AI)</span></td><td>Pricing page uses AI credits</td><td class="num">21%</td></tr>
+        <tr><td>ICONIQ Capital <span style="color:var(--muted)">(via BCG, 2025; self-reported, AI-building companies)</span></td><td>Charge separately for AI, or restrict it to premium tiers</td><td class="num">68%</td></tr>
+        <tr class="mine"><td>This study <span style="color:var(--muted)">(166 pricing pages that mention AI)</span></td><td>Pricing page charges extra for AI in any form</td><td class="num">39%</td></tr>
       </table>
       <div class="claimbox reveal">
-        <div class="n">34%</div>
-        <p style="margin-top:10px"><strong>My observed 34% lands right next to the one rigorous independent survey &mdash; Kyle Poyar&rsquo;s 230-company survey finds ~29% actually meter AI &mdash; and at roughly half the self-reported 68%.</strong> The number you can check tracks the independent survey; the higher figure relies on self-report and a looser definition.</p>
+        <div class="n">39% vs 68%</div>
+        <p style="margin-top:10px"><strong>Like for like, public pricing pages show fewer companies using AI credits (21%) than Poyar&rsquo;s survey reports (29%), and fewer charging extra in any form (39%) than ICONIQ reports (68%).</strong> Both surveys are self-reported and sample different companies. Part of the gap is likely AI sold in enterprise contracts that never appears on a public pricing page, so this measures visible pricing only.</p>
       </div>
     </div>
   </section>
@@ -152,9 +153,9 @@
     <div class="container case-container">
       <h2 class="section-title reveal">Key Outcomes</h2>
       <ul class="case-outcomes reveal">
-        <li>Self-collected a dataset of 191 SaaS companies &times; 23 fields, every value traced to a live pricing page &mdash; 96% coverage of the sampling frame.</li>
-        <li>Produced a contrarian, defensible headline: only 34% of companies charge extra for AI, well below self-reported industry figures near 68%.</li>
-        <li>Quantified the &ldquo;SSO tax&rdquo; at 69% and built benchmarks that did not previously exist publicly (4 tiers, 20% annual discount, $10 median entry price).</li>
+        <li>Self-collected a dataset of 191 SaaS companies &times; 23 columns, every value traced to a pricing page &mdash; 96% coverage of the sampling frame.</li>
+        <li>Found that 39% of AI-offering companies visibly charge extra for AI on their pricing pages, well below the 68% reported in self-reported surveys.</li>
+        <li>Quantified the &ldquo;SSO tax&rdquo; (69% of pages that list SSO gate it to the top tier) and built benchmarks that did not previously exist publicly (median 4 tiers; $14 median entry price; 20% median annual discount among the 84 companies that state one).</li>
         <li>Published an interactive Tableau dashboard so anyone can filter the data and check the findings themselves.</li>
         <li>Documented limitations openly, including sample bias and small category sample sizes.</li>
         <li>Published the full dataset for anyone to check: <a href="saas-pricing-dataset.csv" download style="color:var(--accent);font-weight:600">download the 191-company CSV &darr;</a></li>
