@@ -1,0 +1,17 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Olist text-to-SQL fine-tuning">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- a plain-English question bubble turns into a SQL bracket -->
+  <rect x="24" y="40" width="74" height="50" rx="10" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+  <polyline points="40,90 36,108 58,90" fill="#faf9f6" stroke="#1a1a1a" stroke-width="6" stroke-linejoin="round"/>
+  <text x="61" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#1a1a1a" text-anchor="middle">?</text>
+  <polyline points="104,65 119,65" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+  <polyline points="113,57 121,65 113,73" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="157" y="75" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700" fill="#c0392b" text-anchor="middle">SQL</text>
+  <!-- before and after: 52 -> 78 correct of 150 -->
+  <line x1="24" y1="140" x2="176" y2="140" stroke="#e6e4df" stroke-width="6" stroke-linecap="round"/>
+  <line x1="77" y1="140" x2="103" y2="140" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="77" cy="140" r="9" fill="#faf9f6" stroke="#1a1a1a" stroke-width="4"/>
+  <circle cx="103" cy="140" r="10" fill="#c0392b"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">TEXT-TO-SQL &#183; LLM</text>
+</svg>
