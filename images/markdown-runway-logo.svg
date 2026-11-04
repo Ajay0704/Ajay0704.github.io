@@ -1,0 +1,9 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Markdown Runway">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- a brand's pulse: a flat line with sale beats; the tallest beat (the deepest sale) in the accent red -->
+  <line x1="22" y1="166" x2="178" y2="166" stroke="#1a1a1a" stroke-width="2"/>
+  <polyline points="24,122 46,122 54,98 62,122 84,122 94,78 104,122 120,122 132,44 144,122 156,122 164,100 172,122 178,122" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="120,122 132,44 144,122" fill="none" stroke="#c0392b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">RUNWAY &#183; ML</text>
+</svg>
