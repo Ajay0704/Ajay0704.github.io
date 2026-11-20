@@ -375,7 +375,7 @@ const DRAW = [
      tooltip: tip({ label: c => { const p = D.icons[c.dataIndex]; return c.datasetIndex === 0 ? `List price ${c.raw.toFixed(1)}% a year ($${p.p0.toLocaleString()} → $${p.p1.toLocaleString()})` : `US CPI ${c.raw.toFixed(1)}% a year`; } }) }),
      scales: { x: { beginAtZero: true, max: 14, grid: grid(), border: brd(), ticks: { callback: v => v + "%" } }, y: { grid: { display: false }, border: brd(), ticks: { autoSkip: false, font: { size: 11 } } } } }) }),
  () => { const lg = document.getElementById("lg-matrix"); lg.innerHTML = D.arch.map(a => `<span><i style="background:${css(a.var)}"></i>${a.name}</span>`).join("");
-   const off = { "Cucinelli": [8, 11], "Hermès": [8, -11], "Prada": [-8, -3], "Tapestry": [-8, 0], "Ralph Lauren": [-8, 0] };
+   const off = { "Cucinelli": [-10, -10], "Hermès": [-10, 6], "Prada": [10, -10], "Tapestry": [-8, 0], "Ralph Lauren": [-8, 0] };
    return new Chart(document.getElementById("c-matrix"), { type: "scatter",
    data: { datasets: D.arch.map(a => ({ label: a.name, data: D.matrix.filter(m => m.arch === a.name).map(m => ({ x: m.growth2y, y: m.dmargin, label: m.name, m: m.m2025,
        dx: (off[m.name] || [8, 0])[0], dy: (off[m.name] || [8, 0])[1] })),
