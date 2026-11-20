@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury&rsquo;s Lost Growth &mdash; Case Study &mdash; Ajay Karthick</title>
+  <meta name="description" content="Where luxury&#x27;s growth went from 2023 to 2026, rebuilt from 12 houses&#x27; filings, industry studies and archived prices, with eight sized moves for each type of house." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .kpi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-top:36px}
+    @media (min-width:1280px){.kpi-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    @media (max-width:520px){.kpi-grid{grid-template-columns:minmax(0,1fr)}}
+    .kpi-cell{background:#fff;padding:28px 24px}
+    .kpi-cell .v{font-family:var(--serif);font-weight:900;font-size:2.2rem;line-height:1;white-space:nowrap}
+    .kpi-cell .v.red{color:var(--accent)}
+    .kpi-cell .k{margin-top:12px;font-weight:700;font-size:.98rem}
+    .kpi-cell .d{margin-top:6px;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .claimbox{border-left:4px solid var(--accent);background:var(--bg-paper);padding:26px 30px;margin-top:36px}
+    .claimbox .n{font-family:var(--serif);font-weight:900;font-size:2.4rem;color:var(--accent);line-height:1}
+    .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .cmp{width:100%;border-collapse:collapse;margin-top:28px;font-size:.95rem}
+    .cmp th,.cmp td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);vertical-align:top}
+    .cmp th{background:var(--bg-paper);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+    @media (max-width:767px){.cmp{font-size:.88rem}.cmp th,.cmp td{padding:10px 8px}}
+    .source-note{margin-top:24px;font-size:.86rem;color:var(--muted);line-height:1.6}
+    .steps{margin:28px 0 0;padding:0;list-style:none;counter-reset:s;display:grid;gap:18px}
+    .steps li{counter-increment:s;display:grid;grid-template-columns:42px minmax(0,1fr);gap:4px 14px;line-height:1.6}
+    .steps li::before{content:counter(s);grid-row:span 2;font-family:var(--serif);font-weight:900;font-size:1.7rem;color:var(--accent);line-height:1.1}
+    .steps li b{display:block}
+    .pill{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;white-space:nowrap}
+    .pill.ok{background:#e6f2ea;color:#1f6b45}.pill.weak{background:#fbf0dc;color:#8a5a0c}.pill.no{background:#eeece8;color:#5c5a55}.pill.tiny{background:#e8eef8;color:#2d548f}
+    .tree{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px}
+    .tree div{border:1px solid var(--hairline);background:#fff;padding:14px 16px}
+    .tree b{display:block;font-size:.95rem}.tree span{display:block;font-size:.85rem;color:var(--muted);line-height:1.5;margin-top:4px}
+    @media (max-width:767px){.tree{grid-template-columns:minmax(0,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="masthead-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ajay Karthick</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li><li><a href="education.html">Education</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="case-hero-inner">
+      <div class="case-hero-logo"><img class="case-logo-img" src="images/luxury-lost-growth-logo.svg" alt="Luxury's Lost Growth" /></div>
+      <div class="case-hero-meta">
+        <p class="page-eyebrow">Self-built &middot; Python &middot; Industry research</p>
+        <h1 class="page-title">Luxury&rsquo;s Lost Growth: Where It Went, and How Houses Win It Back</h1>
+        <p class="case-org">Self-Built &middot; 12 houses&rsquo; filings, industry studies and archived prices &middot; Python</p>
+        <ul class="case-meta-list">
+          <li><span class="case-meta-label">Location</span><span class="case-meta-value">Seattle, WA</span></li>
+          <li><span class="case-meta-label">Duration</span><span class="case-meta-value">November 2026</span></li>
+          <li><span class="case-meta-label">Type</span><span class="case-meta-value">Self-Built Project</span></li>
+        </ul>
+        <div class="btn-row">
+          <a href="luxury-report.html" class="btn btn-primary">Read the full report &rarr;</a>
+          <a href="#eight-moves" class="btn btn-secondary">See the eight moves &darr;</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section case-section" id="why-i-built-this">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Why I Built This</h2>
+      <div class="case-body reveal">
+        <p>In 2026 LVMH, Herm&egrave;s and Kering each lost about 40% of their stock market value while Europe&rsquo;s and America&rsquo;s markets rose. The headlines blamed AI stocks, China, a war in the Gulf and a strong euro, often all at once. I wanted to answer the question a luxury CEO would actually ask, using public data only, and to say what each type of house should do about it.</p>
+        <p><strong>The goal had three parts:</strong></p>
+      </div>
+      <ol class="steps reveal">
+        <li><b>Find where the growth went.</b> Separate the market, prices, customers, categories, regions and investor mood instead of blaming one cause.</li>
+        <li><b>Explain the winners and losers.</b> Work out why some houses kept growing through 2024&ndash;2026 while others shrank.</li>
+        <li><b>Say what to do.</b> Turn the evidence into specific moves, each with proof that it works, a sized prize and a number to track.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section case-section case-section-alt" id="the-question">
+    <div class="container case-container">
+      <h2 class="section-title reveal">The Question</h2>
+      <div class="case-body reveal">
+        <p>&ldquo;Why are luxury stocks down?&rdquo; is too vague to test. I reframed it as a client question: <em>where did luxury&rsquo;s growth go from 2023 to 2026, and what should each type of house do to grow profitably again?</em> Then I split it into six parts that don&rsquo;t overlap, each one testable with data:</p>
+      </div>
+      <div class="tree reveal">
+        <div><b>Customers</b><span>Who stopped buying: number of buyers, spend per buyer, top clients vs occasional buyers.</span></div>
+        <div><b>Price</b><span>How much growth came from price rather than more items sold.</span></div>
+        <div><b>Product and brand</b><span>New product, creative changes, and the mix of bags, jewellery and beauty.</span></div>
+        <div><b>Where it&rsquo;s sold</b><span>Regions, tourists, own stores vs department stores.</span></div>
+        <div><b>Outside forces</b><span>China, the US, the Gulf, exchange rates, gold and interest rates.</span></div>
+        <div><b>Investors</b><span>Lower profits vs lower prices paid for the same profits.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section" id="what-i-did">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Did</h2>
+      <ol class="steps reveal">
+        <li><b>Built a fact base from 12 houses&rsquo; filings.</b> 2,252 figures from annual reports, results releases and SEC filings for LVMH, Herm&egrave;s, Kering, Chanel, Richemont, Prada, Moncler, Brunello Cucinelli, Burberry, Tapestry, Capri and Ralph Lauren. Each figure is stored with its document and page.</li>
+        <li><b>Matched fiscal years to calendar years.</b> March and June year-ends were mapped by a fixed rule, so a house reporting to March isn&rsquo;t compared with a different year.</li>
+        <li><b>Rebuilt 13 iconic products&rsquo; US prices.</b> From brand product pages saved by the Internet Archive, from the Chanel Classic bag to Coach&rsquo;s Tabby, compared with US inflation over the same dates.</li>
+        <li><b>Added the industry studies and outside data.</b> Bain&ndash;Altagamma, BCG&ndash;Altagamma, McKinsey&ndash;BoF and Deloitte. Official statistics on China, Japan, the US and gold. Court filings from the Saks bankruptcy.</li>
+        <li><b>Ran the analyses.</b> A growth heatmap, a growth-vs-margin matrix, a profit-pool bridge, regional and category splits, and a share-price vs profit comparison.</li>
+        <li><b>Grouped houses by business model and sized the moves.</b> Five types of house, eight recommended moves, each with an illustrative prize built from stated assumptions.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section case-section case-section-alt" id="what-i-found">
+    <div class="container case-container">
+      <h2 class="section-title reveal">What I Found</h2>
+      <div class="kpi-grid reveal">
+        <div class="kpi-cell"><div class="v">400m &rarr; 315m</div><div class="k">Fewer buyers</div><div class="d">Luxury buyers fell by about 85 million from 2022 to 2026 (Bain). Sales stayed between &euro;358bn and &euro;369bn as the biggest spenders took a larger share.</div></div>
+        <div class="kpi-cell"><div class="v red">−€8.1bn</div><div class="k">Profit pool, 2023&ndash;2025</div><div class="d">Operating profit across 11 houses fell −17%. Six houses grew profit over the same period.</div></div>
+        <div class="kpi-cell"><div class="v red">74%</div><div class="k">Two businesses</div><div class="d">LVMH&rsquo;s Fashion &amp; Leather Goods (−€3.6bn) and Gucci (−€2.3bn) account for almost three-quarters of the fall.</div></div>
+        <div class="kpi-cell"><div class="v">+8&ndash;10%</div><div class="k">Where demand moved</div><div class="d">Jewellery is 2026&rsquo;s fastest-growing category (Bain). Richemont&rsquo;s jewellery profit rose to &euro;5.0bn while its watchmakers fell 81%.</div></div>
+      </div>
+      <div class="case-body reveal" style="margin-top:40px">
+        <p><strong>The story in one line:</strong> luxury bought its 2019&ndash;2025 growth with price. Average prices rose about 61% (McKinsey&ndash;BoF), and buyers left. The damage is concentrated in a few big fashion and leather-goods businesses. Meanwhile jewellers, scarcity houses like Herm&egrave;s and Cucinelli, and accessible brands with momentum like Coach and Ralph Lauren kept growing.</p>
+        <p><strong>The surprise:</strong> the winners raised prices too. Coach and Ralph Lauren raised average selling prices by double digits in their latest full years and still added millions of new customers. The lesson isn&rsquo;t &ldquo;don&rsquo;t raise prices&rdquo;. Price has to follow desirability, and a brand needs to keep a way in for new buyers.</p>
+        <p><strong>China is split, not gone:</strong> in Jul&ndash;Sep 2026 Tapestry grew 39% in Greater China and Ralph Lauren 28% in Asia, while LVMH and Kering each fell 5% in Asia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section" id="five-types">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Five Types of House</h2>
+      <div class="table-scroll reveal"><table class="cmp">
+        <tr><th>Type</th><th>Members</th><th>2024&ndash;2025</th><th>Verdict</th></tr>
+        <tr><td><strong>Scarcity houses</strong></td><td>Herm&egrave;s, Brunello Cucinelli</td><td>Growth +24.9% and +25.3%; margins held</td><td><span class="pill ok">Growing</span></td></tr>
+        <tr><td><strong>Mega-brands</strong></td><td>LVMH fashion, Chanel, Kering</td><td>Growth 0.0%, −2.6%, −20.8%; margins down 4&ndash;13 points</td><td><span class="pill no">Stalled</span></td></tr>
+        <tr><td><strong>Jewellers</strong></td><td>Richemont, LVMH Watches &amp; Jewelry, Kering Jewelry</td><td>Richemont +15.4%; jewellery margin 30.5%</td><td><span class="pill ok">Growing</span></td></tr>
+        <tr><td><strong>Accessible luxury with heat</strong></td><td>Coach, Ralph Lauren</td><td>Growth +22.8% and +20.4%; margins up</td><td><span class="pill ok">Growing</span></td></tr>
+        <tr><td><strong>Creative-cycle brands</strong></td><td>Prada (Miu Miu), Moncler, Burberry, Michael Kors</td><td>Swing with the creative moment: Miu Miu retail +93% in 2024, then +0.8% in 2026</td><td><span class="pill weak">Volatile</span></td></tr>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="section case-section case-section-alt" id="eight-moves">
+    <div class="container case-container">
+      <h2 class="section-title reveal">Eight Moves to Win Growth Back</h2>
+      <div class="case-body reveal"><p><em>Each move in the full report comes with evidence, a house where it worked, an illustrative prize, a KPI and the risks.</em></p></div>
+      <ul class="case-outcomes reveal" style="margin-top:20px">
+        <li><strong>Re-earn the price and reopen the entry door.</strong> Winning back the 6% of organic sales LVMH Fashion &amp; Leather Goods lost in 2024&ndash;2025 is worth about &euro;2.4bn of revenue.</li>
+        <li><strong>Grow where the category is growing.</strong> Jewellery adds &euro;2.6&ndash;3.2bn of new spending in 2026 alone, but gold costs must be managed.</li>
+        <li><strong>Restart the product engine.</strong> Launches of new hero bags fell 70&ndash;80% while prices of the old ones rose (Bain).</li>
+        <li><strong>Rebalance regions and channels.</strong> Dubai visitors fell 44% and Chinese arrivals in Japan about 55% in 2026. Local clients are steadier than tourist flows.</li>
+        <li><strong>Own the second life of the product.</strong> Secondhand luxury is a &euro;50bn market growing 7&ndash;8% a year, faster than new goods.</li>
+        <li><strong>Win the AI shelf.</strong> 70% of luxury questions to AI assistants name no brand, and AI-referred visitors spend over 40% more per visit (Bain).</li>
+        <li><strong>Deepen the relationships that are still growing.</strong> Top customers make up more than half of all luxury spending (Bain).</li>
+        <li><strong>Make every store earn its place.</strong> LVMH&rsquo;s revenue per store fell 9% from 2023 to 2025 as it added stores while sales fell.</li>
+      </ul>
+      <div class="btn-row reveal"><a href="luxury-report.html" class="btn btn-primary">Read the full report &rarr;</a></div>
+    </div>
+  </section>
+
+  <section class="section case-section" id="how-i-made-sure-its-real">
+    <div class="container case-container">
+      <h2 class="section-title reveal">How I Made Sure It&rsquo;s Real</h2>
+      <ul class="case-outcomes reveal" style="margin-top:28px">
+        <li><strong>Every number has a source.</strong> Each company figure is stored with its document and page, and the report&rsquo;s appendix links every document.</li>
+        <li><strong>An independent audit.</strong> A separate AI review session, told to assume nothing was right, re-checked about 470 numbers against the fact base. It found 25 problems (6 wrong, 7 overstated, 4 without a source on file, 8 minor wording), and all were fixed before publishing.</li>
+        <li><strong>I kept the inconvenient results.</strong> Archived prices showed only Chanel&rsquo;s Classic bag doubling, with most icons only modestly above inflation and Cartier below it, so the report says that instead of the simpler story. Where a press report and the archive disagreed (Lady Dior), the report shows both.</li>
+        <li><strong>Like for like.</strong> Each company&rsquo;s own growth measure is kept and labelled, fiscal years are mapped by one rule, and scope changes such as Versace and Kering Beaut&eacute; are flagged.</li>
+        <li><strong>Known limits.</strong> Most houses don&rsquo;t report units, so price and volume are separated indirectly. Some McKinsey figures came through press coverage, and Bain&rsquo;s full 2026 report isn&rsquo;t public yet.</li>
+      </ul>
+      <div class="claimbox reveal">
+        <div class="n">&minus;13.2% &rarr; &minus;33.7%</div>
+        <p style="margin-top:10px"><strong>I found and fixed a bug in my own analysis.</strong> In the share-price work, one missing market value at the start of the data quietly dropped four of the six European houses from the sector average. I added checks that stop the script if any value is missing, and the corrected figure matches the raw monthly prices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-section case-section-alt case-section-tight-bottom">
+    <div class="container case-container"><h2 class="section-title reveal">Tools</h2><div class="case-tools reveal"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Chart.js</span><span class="tag">HTML / CSS</span><span class="tag">Internet Archive CDX API</span><span class="tag">SEC EDGAR</span><span class="tag">Yahoo Finance data</span><span class="tag">FRED</span></div></div>
+  </section>
+  <section class="section case-section case-section-alt case-section-tight-top">
+    <div class="container case-container"><h2 class="section-title reveal">Skills</h2><div class="case-tools reveal"><span class="tag">Issue Trees</span><span class="tag">Financial Statement Analysis</span><span class="tag">Profit Pool Analysis</span><span class="tag">Market Sizing</span><span class="tag">Price-Volume Analysis</span><span class="tag">Segmentation</span><span class="tag">Data Validation</span><span class="tag">Strategy Recommendations</span><span class="tag">Data Storytelling</span></div></div>
+  </section>
+  <nav class="case-back-nav"><div class="container case-container"><a href="projects.html" class="case-back-link">&larr; Back to Projects</a></div></nav>
+  <footer class="footer"><div class="container"><p>&copy; 2026 Ajay Karthick &mdash; Seattle, WA</p><a href="index.html" class="footer-top">Back to home &rarr;</a></div></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

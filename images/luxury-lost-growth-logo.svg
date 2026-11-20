@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luxury's Lost Growth">
+  <rect width="200" height="200" fill="#faf9f6"/>
+  <rect width="200" height="7" fill="#c0392b"/>
+  <!-- a K: one arm rising (the houses that grew), one falling in red (the houses that shrank) -->
+  <line x1="22" y1="166" x2="178" y2="166" stroke="#1a1a1a" stroke-width="2"/>
+  <polyline points="30,112 62,104 92,100" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="92,100 122,80 148,64 174,46" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="92,100 122,118 148,134 174,150" fill="none" stroke="#c0392b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="92" cy="100" r="5" fill="#1a1a1a"/>
+  <text x="24" y="191" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#6b6b6b" letter-spacing="1.5">LUXURY &#183; 2023–26</text>
+</svg>
